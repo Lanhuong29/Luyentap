@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        .container {
+            width: 992px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap; /*Khi các phần tử hiện tại đã full màn hình từ những phần tử khác sẽ tự động xuống hàng dưới*/
+            justify-content: space-around;
+        }
+        .col {
+            width: 33.333333%;
+            padding: 0 15px;
+        }
+        .item {
+            border: 1px solid gray;
+            border-radius: 3px;
+            text-align: center; /*căn text ra giữa*/
+        }
+        .item_title {
+            border-bottom: 1px solid gray;
+            background-color: rgb(239, 239, 239);
+            padding: 7px;
+        }
+        /* h2{margin: 0;} */
+        .item_content {
+            padding: 15px;
+        }
+        .unit {
+            color: gray;
+        }
+        .btn {
+            display: block;
+            background-color: #06c;
+            border: 1px solid #06c;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .active:hover {
+            background-color: transparent;
+            color: #06c;
+            border: 1px solid #06c;
+        }
+        @media (max-width: 768px) {
+            .container{
+                width: 100%;
+            }
+            .col{
+                width: 50%;
+            }
+        }
+        /*Nếu chỉ định cú pháp @media rồi set kích thước trong (screen) thì máy sẽ hiểu "Nếu màn hình rộng 0 <= screen <= 768px thì sẽ áp dụng CSS @media"*/
+        /*Nếu màn hình có kích thước 425px < screen < 768px thì màn hình cũng chia đôi, hiển thị 2 col */
+        @media (max-width: 425px) {
+            .container{
+                width: 100%;
+            }
+            .col{
+                width: 100%;
+            }
+        }
+        /*Nếu chỉ định cú pháp @media rồi set kích thước trong (screen) thì máy sẽ hiểu "Nếu màn hình rộng 0 <= screen <= 425px thì sẽ áp dụng CSS @media"*/
+        /*Mức độ ưu tiên áp dụng CSS là từ chi tiết -> tổng quan, tức từ cỡ màn hình nhỏ -> lớn.
+        Ví dụ 0 <= screen <= 768 thì khoảng 0 <= screen <= 425 vẫn thuộc khoảng 0-768 nhưng phần chỉ định kích thước 0-425px được chỉ định sâu hơn, kỹ hơn nên được ưu tiên áp dụng*/
+
+        /*Nếu không xếp theo thứ tự kích thước màn hình lớn -> nhỏ thì nên thêm end*/
+        /*Tuy nhiên áp dụng cả "and" thì không tối ưu. Do tới màn hình 425px nếu vẫn muốn áp dụng style 50% thì phải viết lại @media*/
+        /* @media (max-width: 425px) and (min-width: 426px) {
+            .container{
+                width: 100%;
+            }
+            .col{
+                width: 100%;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="item">
+                        <div class="item_title">
+                            <h2>Free</h2>
+                        </div>
+                        <div class="item_content">
+                            <h3>
+                                <span class="money">$0</span>
+                                <span class="unit">/ mo</span>
+                            </h3>
+                            <p>10 user included</p>
+                            <p>2GB of storage</p>
+                            <p>Email support<br>Help center access</p>
+                            <a class= "btn active" href="">Signup for free</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item">
+                        <div class="item_title">
+                            <h2>Free</h2>
+                        </div>
+                        <div class="item_content">
+                            <h3>
+                                <span class="money">$0</span>
+                                <span class="unit">/ mo</span>
+                            </h3>
+                            <p>10 user included</p>
+                            <p>2GB of storage</p>
+                            <p>Email support<br>Help center access</p>
+                            <a class= "btn active" href="">Signup for free</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item">
+                        <div class="item_title">
+                            <h2>Free</h2>
+                        </div>
+                        <div class="item_content">
+                            <h3>
+                                <span class="money">$0</span>
+                                <span class="unit">/ mo</span>
+                            </h3>
+                            <p>10 user included</p>
+                            <p>2GB of storage</p>
+                            <p>Email support<br>Help center access</p>
+                            <a class= "btn active" href="">Signup for free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

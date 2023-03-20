@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiện nay dùng flex để dàn trang rất phổ biến</title>
+    <style>
+        *{box-sizing: border-box;}
+        .content {
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+        /* .b1 {height: 50px;}
+        .b2 {height: 100px;}
+        .b3 {height: 150px;}
+        .b4 {height: 200px;}
+        .b5 {height: 250px;} */
+        .row {
+            border: 1px solid red;
+            /* height: 1200px; */
+            display: flex;
+            flex-wrap: wrap; /*Khi các phần tử hiện tại đã full màn hình từ những phần tử khác sẽ tự động xuống hàng dưới*/
+            /*justify-content: space-around;*/ /*Căn lề trái - phải: căn lề trái (start), phải (end), giữa (center), dàn đều theo khoảng trống thừa trên màn hình (space-between), căn đều khoảng trắng còn lại - chia đều khoảng trắng sang 2 bên (space around)*/
+            /*align-content: space-around;*/ /*Căn lề trên - dưới*/
+            /*align-items: center;*/ /*đẩy nội dung lên trên(flex-start), xuống dưới(flex-end), căn giữa, để text bên trong phần tử căn thẳng hàng với nhau trên một hàng (baseline), dàn đều các content bên trong (stretch)*/
+            /*flex-direction: column;*/ /*thay đổi chiều sắp xếp theo cột (column), hàng (row) hoặc đảo ngược lại thứ tự trong cột/hàng (row-reverse/column-reverse)*/
+        }
+        .col {
+            width: 33.3333333%;
+            padding: 0 15px;
+            /* background-color: skyblue;
+            border: 1px solid white; */
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col">
+            <div class="content b1">
+                <h1>1</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b2">
+                <h1>2</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b3">
+                <h1>3</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b4">
+                <h1>4</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b5">
+                <h1>5</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

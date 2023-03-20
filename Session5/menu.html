@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none; /* Bỏ đánh dấu danh sách */
+            padding: 0; /*khoảng cách với viền*/
+            margin: 0; /*khoảng cách với viền*/
+        }
+        /*MENU DỌC*/
+        .menu_doc li {
+            position: relative;
+        }
+        .menu_doc_con {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            min-width: 225px; /* thiết lập chiều rộng tối thiểu (nhỏ nhất) cho thành phần */
+            display: none;
+        }
+        .menu_doc li:hover > .menu_doc_con {
+            display: block;
+            /* sự thay đổi của một phần tử trên màn hình mỗi khi có “con chuột” trỏ đến nó */
+        }
+        .menu_doc li a {
+            text-decoration: none; /*Bỏ gạch chân auto*/
+            background-color: #06c;
+            display: block;
+            font-size: 24px;
+            border-bottom: 1px solid white;
+            padding: 10px;
+            color: white; /*màu chữ*/
+        }
+        .menu_doc li a:hover {
+            background-color: blue;
+            /* khi trỏ chuột vào đây thì background đổi màu */
+        }
+        .menu_doc li:last-child a{
+            border: none; /*bỏ border của phần tử cuối menu dọc*/
+        }
+        /*MENU NGANG*/
+        .menu_ngang::after{
+            content:'';
+            display: block;
+            clear: both;
+        }
+        .menu_ngang > li { /* ">" chỉ áp dụng đến các phần tử con của menu ngang > li */
+            float: left;
+        }
+        .menu_ngang li {
+            position: relative;
+        }
+        .menu_ngang li a {
+            display: block;
+            background-color: #06c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-right: 1px solid white;
+        }
+        .menu_ngang li:last-child {
+            border: none;
+        }
+        .menu_ngang_con {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 225px;
+            display: none;
+        }
+        .menu_ngang li:hover > .menu_ngang_con {
+            display: block;
+        }
+        .menu_ngang_con .menu_ngang_con {
+            top: 0;
+            left: 100%;
+        }
+        .menu_ngang .menu_ngang_con li a{
+            border: none;
+            border-bottom: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 600px; border: 1px solid #000;">
+        <h2>Menu dọc</h2>
+        <ul class="menu_doc">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li>
+                <a href="">Services</a>
+                <ul class="menu_doc_con">
+                    <li><a href="">Service 1</a></li>
+                    <li><a href="">Service 2</a></li>
+                    <li><a href="">Service 3</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+
+    <div style="width: 600px; border: 1px solid #000;">
+        <h2>Menu ngang</h2>
+        <ul class="menu_ngang">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li>
+                <a href="">Services</a>
+                <ul class="menu_ngang_con">
+                    <li><a href="">Service 1</a></li>
+                    <li><a href="">Service 2</a>
+                        <ul class="menu_ngang_con">
+                            <li><a href="">Service 2.1</a></li>
+                            <li><a href="">Service 2.2</a></li>
+                            <li><a href="">Service 2.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Service 3</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>

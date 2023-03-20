@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        .wrap {
+            width: 800px;
+            height: 800px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        .wrap div {
+            width: 100px;
+            height: 100px;
+        }
+        .div1 {
+            background-color: red;
+            position: fixed;
+            /* Màn hình có cuộn lên xuống bao nhiêu thì phần tử được fix position vẫn luôn ở vị trí được fixed */
+            /* Đối với position: fixed chỉ nên sử dụng top-left hoặc bottom-right */
+            z-index: 2;
+            /* z-index là thuộc tính để quyết định phần tử nào được hiển thị đè lên phần tử nào.*/
+            /* Phần tử nào có chỉ số thuộc tính z-index cao hơn thì sẽ hiển thị trên phần tử có chỉ số thấp hơn */
+        }
+        .div2 {
+            background-color: green;
+            position: relative;
+            /* Định vị tương đối */
+            /* Chỉ sử dụng được định vị theo chiều Ox,Oy top-left */
+            top: 500px;
+            left: 700px;
+        }
+        .div3 {
+            background-color: blue;
+            position: absolute;
+            /* Định vị tuyệt đối một phần tử theo phần tử gần nhất chứa nó có position relative */
+            /* Absolute mới dùng được định vị bottom, right. Relative không thể dùng định vị này. */
+            /* Absolute muốn được sử dụng fix theo phần tử cha thì bắt buộc phần tử cha chứa nó phải có thuộc tính position relative */
+            bottom: 0px;
+            right: 0px;
+        }
+        .div4 {
+            background-color: darkred;
+            position: sticky;
+            /* Tương tự fixed, đứng im một chỗ. Khác ở chỗ là chỉ fixed ở trong section hiện tại đang chứa nó (nếu trang không có section thì static tương tự fixed vì static được sử dụng cho toàn bộ nội dung div (vì div không phải là section)) */
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <!-- Nếu không có thẻ index, phần tử viết sau sẽ hiển thị trên phần tử được viết trước -->
+    </div>
+    <section class="wrap">
+        <div class="div4"></div>
+    </section>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio obcaecati repellat, inventore ab officiis quasi neque omnis sint ullam, consequatur libero id veritatis laudantium saepe ipsam nesciunt? Quaerat, corporis expedita.</h1>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio obcaecati repellat, inventore ab officiis quasi neque omnis sint ullam, consequatur libero id veritatis laudantium saepe ipsam nesciunt? Quaerat, corporis expedita.</h1>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio obcaecati repellat, inventore ab officiis quasi neque omnis sint ullam, consequatur libero id veritatis laudantium saepe ipsam nesciunt? Quaerat, corporis expedita.</h1>
+</body>
+</html>

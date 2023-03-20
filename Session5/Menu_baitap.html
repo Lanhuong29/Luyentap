@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        ul {
+            list-style: none; /* Bỏ đánh dấu danh sách */
+            padding: 0; /*khoảng cách với viền*/
+            margin: 0; /*khoảng cách với viền*/
+        }
+        .menu_tren li a {
+            text-decoration: none; /*Bỏ gạch chân auto*/
+            display: block;
+            font-size: 12px;
+            padding: 10px;
+        }
+        .menu_tren_phai {
+            width: 20%;
+        }
+        .menu_tren_row {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .row::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .menu_tren_phai_col1 {
+            width: 60%;
+            float: left;
+            padding: 0 15px;
+        }
+        .menu_tren_phai_col2 {
+            width: 40%;
+            float: left;
+            padding: 0 15px;
+        }
+        .row_2 {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .col_2_1 {
+            width: 20%;
+            float: left;
+            padding: 0 15px;
+        }
+        .col_2_2 {
+            width: 20%;
+            float: left;
+            padding: 0 15px;
+        }
+        .col_2_3 {
+            width: 20%;
+            float: left;
+            padding: 0 15px;
+        }
+        .col_2_4 {
+            width: 20%;
+            float: left;
+            padding: 0 15px;
+        }
+        .col_2_5 {
+            width: 20%;
+            float: left;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="menu_tren_row">
+            <div class="menu_tren_phai_col1">
+                <p><b>Company name</b></p>
+            </div>
+            <div class="menu_tren_phai_col2">
+                <ul>
+                    <div class="row_2">
+                        <div class="col_2_1">
+                            <li><a href="">Features</a></li>
+                        </div>
+                        <div class="col_2_2">
+                            <li><a href="">Enterprise</a></li>
+                        </div>
+                        <div class="col_2_3">
+                            <li><a href="">Support</a></li>
+                        </div>
+                        <div class="col_2_4">
+                            <li><a href="">Pricing</a></li>
+                        </div>
+                        <div class="col_2_5">
+                            <li><a class="sign up" href="">Sign up</a></li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <table>
+            <div>
+                <tr>
+                    <div class="title">
+                        <p><b>Pricing</b></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cum veniam dolorem ut, molestias non eum odit totam, unde vero eveniet similique! Libero praesentium recusandae magni ad sint repellat beatae?</p>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="sub_option">
+                        <div class="sub_option_1">
+                            <div class="sub_option_title"><b>Free</b></div>
+                            <div class="sub_option_des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur, sed nihil atque labore vitae fuga numquam perferendis iusto magnam ipsam quos natus provident harum quisquam dicta doloribus ex cum.</div>
+                            <div class="sub_option_button">
+                                <a href="">Sign up for free</a>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="menu_duoi">
+                        <div class="menu_duoi_1">
+                            <i class="icofont-bag"></i>
+                        </div>
+                        <div class="menu_duoi_2">
+                            <p><b>Features</b></p>
+                            <ul>
+                                <li>Cool stuff 1</li>
+                                <li>Cool stuff 2</li>
+                                <li>Cool stuff 3</li>
+                                <li>Cool stuff 4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </tr>
+            </div>
+        </table>
+    </section>
+</body>
+</html>

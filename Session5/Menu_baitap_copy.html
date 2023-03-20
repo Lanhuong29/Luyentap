@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Session5/icofont/icofont.min.css">
+    <style>
+        *{box-sizing: border-box;}
+        body {
+            position: relative;
+            padding: 10px;
+        }
+        ul {
+            list-style: none; /* Bỏ đánh dấu danh sách */
+            padding: 0; /*khoảng cách với viền*/
+            margin: 0; /*khoảng cách với viền*/
+        }
+        .title {
+            text-align: center;
+            padding: 20px;
+        }
+        .sub_option {
+            text-align: center;
+        }
+        /*MENU NGANG TRÊN*/
+        .menu_tren::after{
+            content:'';
+            display: block;
+            clear: both;
+        }
+        .menu_tren > li { /* ">" chỉ áp dụng đến các phần tử con của menu ngang > li */
+            float: left;
+        }
+        .menu_tren li {
+            position: relative;
+        }
+        .menu_tren li a {
+            display: block;
+            background-color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            /* border-right: 1px solid white; */
+        }
+        .menu_tren li:last-child {
+            border: none;
+        }
+        .menu_tren_con {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 225px;
+            display: none;
+        }
+        .menu_tren li:hover > .menu_tren_con {
+            display: block;
+        }
+        .menu_tren_con .menu_tren_con {
+            top: 0;
+            left: 100%;
+        }
+        .menu_tren .menu_tren_con li a{
+            border: none;
+            border-bottom: 1px solid white;
+        }
+        .menu_tren_row {
+            margin-left: 0px;
+            margin-right: 0px;
+            border-bottom: 1px solid grey;
+        }
+        .row::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .menu_tren_phai_col1 {
+            width: 40%;
+            float: left;
+            padding: 0 15px;
+            margin-block-start: -18.72px;
+            margin-block-end: -18.72px;
+        }
+        .menu_tren .menu_tren.row .menu_tren_phai_col2 {
+            width: 40%;
+            float: left;
+            padding: 15px -15px;
+        }
+        .menu_tren li a.sign_up {
+            border: 1px solid #06c;
+            border-radius: 5px;
+            color: #06c;
+            padding: 5px;
+        }
+        .menu_tren li a.sign_up:hover {
+            background-color: #06c;
+            color: white;
+        }
+        .noidung {
+            width: 992px;
+            margin: 0 auto;
+            /*Cách thường dùng để căn giữa nội dung web*/
+            
+            /* position: absolute; */
+            /* transform: translate(-50%,50%);
+            top: -300%;
+            left: 50%;
+            padding: 0px; */
+        }
+        .sub_option_button {
+            display: block;
+            background-color: #06c;
+            border: 1px solid;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+        }
+        .sub_option_button:hover {
+            background-color: white;
+            color: #06c;
+        }
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .row::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .col {
+            width: 33%;
+            float: left;
+            padding: 0 15px;
+        }
+        .menu_duoi li a{
+            text-decoration: none;
+            color: rgb(97, 97, 97);
+        }
+        .row_menu_duoi {
+            /* margin-left: -15px;
+            margin-right: -15px; */
+            border-top: 1px solid grey;
+            padding: 20px;
+        }
+        .row_menu_duoi::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .col_menu_duoi {
+            width: 25%;
+            float: left;
+            padding: 0 10px;
+        }
+        .menu_duoi_title {
+            font-size: 20px;
+            margin-block-start: 0px;
+            margin-block-end: 10px;
+            /* margin: 0px; */
+        }
+        .sub_option {
+            border: 1px solid grey;
+            border-radius: 2px;
+            padding: 0px;
+        }
+        .sub_option_title {
+            padding: 10px;
+            background-color: rgb(223, 223, 223);
+            border-bottom: 1px solid grey;
+            font-size: 22px;
+        }
+        .sub_option_des {
+            padding: 10px;
+        }
+        .sub_option_button {
+            margin: 10px;
+            padding: 10px;
+        }
+        /* .icofont-brand-apple {
+            float: left;
+            padding: 10px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="menu_tren">
+        <div class="menu_tren_row">
+            <div class="menu_tren_phai_col1">
+                <h3>Menu trên</h3>
+            </div>
+            <div class="menu_tren_phai_col2">
+                <ul class="menu_tren">
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Enterprise</a></li>
+                    <li>
+                        <a href="">Enterprise</a>
+                        <ul class="menu_tren_con">
+                            <li><a href="">Enterprise 1</a></li>
+                            <li><a href="">Enterprise 2</a>
+                                <ul class="menu_tren_con">
+                                    <li><a href="">Enterprise 2.1</a></li>
+                                    <li><a href="">Enterprise 2.2</a></li>
+                                    <li><a href="">Enterprise 2.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Enterprise 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Policy</a></li>
+                    <li><a class="sign_up" href="">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="noidung">
+            <tr>
+                <div class="title">
+                    <p style="font-size:46px"><b>Pricing</b></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cum veniam dolorem ut, molestias non eum odit totam, unde vero eveniet similique! Libero praesentium recusandae magni ad sint repellat beatae?</p>
+                </div>
+            </tr>
+            <tr>
+                <div class="row">
+                        <div class="col">
+                            <div class="sub_option">
+                                <div class="sub_option_title"><b>Free</b></div>
+                                <div class="sub_option_des">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div>
+                                    <a class="sub_option_button" href="">Sign up for free</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="sub_option">
+                                <div class="sub_option_title"><b>Free</b></div>
+                                <div class="sub_option_des">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div>
+                                    <a class="sub_option_button" href="">Sign up for free</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="sub_option">
+                                <div class="sub_option_title"><b>Free</b></div>
+                                <div class="sub_option_des">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div>
+                                    <a class="sub_option_button" href="">Sign up for free</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </tr>
+            <br>
+            <div class="row_menu_duoi">
+                <div class="menu_duoi">
+                    <div class="col_menu_duoi">
+                        <div class="menu_duoi_1">
+                            <i class="icofont-brand-apple"></i>
+                            <p><i class="icofont-copyright">2017-2018</i></p>
+                        </div>
+                    </div>
+                    <div class="col_menu_duoi">
+                        <div class="menu_duoi_2">
+                            <p class="menu_duoi_title"><b>Features</b></p>
+                            <ul>
+                                <li><a href="">Cool stuff 1</a></li>
+                                <li><a href="">Cool stuff 2</a></li>
+                                <li><a href="">Cool stuff 3</a></li>
+                                <li><a href="">Cool stuff 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col_menu_duoi">
+                        <div class="menu_duoi_3">
+                            <p class="menu_duoi_title"><b>Features</b></p>
+                            <ul>
+                                <li><a href="">Cool stuff 1</a></li>
+                                <li><a href="">Cool stuff 2</a></li>
+                                <li><a href="">Cool stuff 3</a></li>
+                                <li><a href="">Cool stuff 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col_menu_duoi">
+                        <div class="menu_duoi_4">
+                            <p class="menu_duoi_title"><b>Features</b></p>
+                            <ul>
+                                <li><a href="">Cool stuff 1</a></li>
+                                <li><a href="">Cool stuff 2</a></li>
+                                <li><a href="">Cool stuff 3</a></li>
+                                <li><a href="">Cool stuff 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

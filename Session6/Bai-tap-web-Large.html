@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Session5/icofont/icofont.min.css">
+    <style>
+        *{box-sizing: border-box;}
+        .wrap {
+            /* width: 50%; */
+            max-width: 1080px; /*Giữ size trang để zoom lên không bị vỡ cấu trúc*/
+            margin: 0 auto;
+            text-decoration: none;
+            font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            /* padding: 10px; */
+            /* border: 1px solid black; */ /*Để dễ nhìn box tổng*/
+            /* display: flex; */
+        }
+        a {
+            text-decoration: none;
+            color: gray;
+        }
+        h2 {margin: 0}
+        h3 {margin: 0}
+        p {margin: 0}
+        .wrap_row {
+            display: flex;
+            flex-flow: row wrap;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .wrap_col {
+            /* border: 1px solid red; */ /*Để dễ nhìn các box trong menu*/
+            width: 33.33333%;
+            margin: auto;
+        }
+        .title {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .btn_signup {
+            text-decoration: none;
+            text-align: right;
+            font-weight: 400px;
+        }
+        .button_signup {
+            border: 1px solid gray;
+            padding: 6px;
+            border-radius: 4px;
+        }
+        .icofont-search-1 {
+            margin-right: 10px;
+        }
+        .menu {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .banner {
+            padding: 30px;
+            background-color: #343a40;
+            color: white;
+            border-radius: 5px;
+        }
+        .banner_title {
+            width: 50%;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 46px;
+            padding-bottom: 30px;
+        }
+        .banner_content {
+            width: 60%;
+            color: white;
+        }
+        .reading {color: white;}
+        .row {
+            display: flex;
+            flex-grow: row wrap;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-left: -15px;
+            margin-right: -15px;
+            /* border: 1px solid red; */ /*Để dễ nhìn box*/
+        }
+        .col-50 {
+            width: 50%;
+            padding: 0 15px;
+        }
+        .item_feature {
+            display: flex;
+            border: 1px solid gray;
+            border-radius: 5px;
+            flex-direction: row;
+        }
+        .item_desc {
+            width: 60%;
+            padding: 15px;
+        }
+        .item_thumbnail {
+            display: flex;
+            width: 40%;
+            background-color: #55595c;
+            align-content: center;
+        }
+        h3 {
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .date {
+            font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            color: #6c757d;
+        }
+        .item_content {
+            font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        }
+        .item_reading {
+            color:#007bff;
+        }
+        .item_thumbnail .thumbnail {
+            margin: auto;
+            color: white;
+        }
+        .col-75 {
+            width: 75%;
+            padding: 0 15px;
+        }
+        .col-25 {
+            width: 25%;
+            padding: 0 15px;
+        }
+        .title_content {
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            border-bottom: 1px solid gray;
+            padding-bottom: 15px;
+        }
+        .title_article {
+            border-bottom: 1px solid gray;
+        }
+        .title_article h3 {
+            padding-top: 20px;
+            padding-bottom: 5px;
+        }
+        .title_article p {
+            padding-bottom: 20px;
+        }
+        .content_article {
+            padding-top: 20px;
+        }
+        .widget h2 {
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            padding-bottom: 10px;
+        }
+        .widget_1 {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        .widget_2 {
+            padding: 10px;
+        }
+        .widget_3 {
+            padding: 10px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li a{
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="wrap_row">
+                <div class="wrap_col">
+                    <a href="" class="btn">Subscribe</a>
+                </div>
+                <div class="wrap_col">
+                    <div class="title">
+                        <h2 style="font-size: 46px;">Large</h2>
+                    </div>
+                </div>
+                <div class="wrap_col">
+                    <div class="btn_signup">
+                        <i class="icofont-search-1"></i>
+                        <a class="button_signup" href="">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="menu">
+                <a href="">World</a>
+                <a href="">U.S.</a>
+                <a href="">Technology</a>
+                <a href="">Design</a>
+                <a href="">Culture</a>
+                <a href="">Business</a>
+                <a href="">Politics</a>
+                <a href="">Opinion</a>
+                <a href="">Science</a>
+                <a href="">Health</a>
+                <a href="">Style</a>
+                <a href="">Travel</a>
+            </div>
+        </nav>
+        <section class="banner">
+            <div class="banner_title">
+                <p><b>Title of a longer featured blog post</b></p>
+            </div>
+            <div class="banner_content">
+                <p>Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+                <a class="reading" href=""><b>Continue reading...<b></b></a>
+            </div>
+        </section>
+        <section class="feature">
+            <div class="row">
+                <div class="col-50">
+                    <div class="item_feature">
+                        <div class="item_desc">
+                            <p class="category" style="color:#007bff">World</p>
+                            <h3>Featured post</h3>
+                            <p class="date">Nov 12</p>
+                            <p class="item_content">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            <a href="" class="item_reading">Continue reading</a>
+                        </div>
+                        <div class="item_thumbnail">
+                            <p class="thumbnail">Thumbnail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="item_feature">
+                        <div class="item_desc">
+                            <p class="category" style="color:#28a745">Design</p>
+                            <h3>Post title</h3>
+                            <p class="date">Nov 11</p>
+                            <p class="item_content">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            <a href="" class="item_reading">Continue reading</a>
+                        </div>
+                        <div class="item_thumbnail">
+                            <p class="thumbnail">Thumbnail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main">
+            <div class="row">
+                <div class="col-75">
+                    <div class="content_left">
+                        <div class="title_content">
+                            <h2>From the Firehose</h2>
+                        </div>
+                        <article> <!--bao bài viết-->
+                            <div class="title_article">
+                                <h3>Sample blog post</h3>
+                                <p class="date">January 1, 2014 by
+                                    <a href="" style="color:#007bff"> Mark</a>
+                                </p>
+                                <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+                            </div>
+                            <div class="content_article">
+                                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p><br>
+
+                                <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p><br>
+                                    
+                                <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p><br>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <aside>
+                        <div class="widget">
+                            <div class="widget_1">
+                                <h2>About</h2>
+                                <div class="content_widget">
+                                    <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                                </div>
+                            </div>
+                            <div class="widget_2">
+                                <h2>Archives</h2>
+                                <div class="content_widget">
+                                    <ul>
+                                        <li><a href="">March 2014</a></li>
+                                        <li><a href="">December 2013</a></li>
+                                        <li><a href="">November 2013</a></li>
+                                        <li><a href="">October 2013</a></li>
+                                        <li><a href="">September 2013</a></li>
+                                        <li><a href="">August 2013</a></li>
+                                        <li><a href="">July 2013</a></li>
+                                        <li><a href="">June 2013</a></li>
+                                        <li><a href="">May 2013</a></li>
+                                        <li><a href="">April 2013</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="widget_3">
+                                <h2>Elsewhere</h2>
+                                <div class="content_widget">
+                                    <ul>
+                                        <li><a href="">GitHub</a></li>
+                                        <li><a href="">Twitter</a></li>
+                                        <li><a href="">Facebook</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

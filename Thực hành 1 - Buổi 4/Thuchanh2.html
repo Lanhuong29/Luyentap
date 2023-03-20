@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box; /*Khi set kích thước cho phần tử thì kích thước của border box đã bao gồm cả các phần tử con bổ sung (padding và border). Tác dụng: set kích thước chính xác hơn. Nên áp dụng cho toàn bộ các phần tử. KHUYÊN DÙNG*/
+        }
+        section {
+            background-color: #d6d6d6;
+            padding: 20px;
+        }
+        .col {
+            width: 50%; /*Khi muốn chia phần tử căn ngang hàng với nhau thì phải chia màn hình ra thành 2 phần để 2 phần tử có thể lên cùng hàng với nhau. Ví dụ chia màn hình 50/50 -> các phần tử col đều có chiều rộng là 50% màn hình -> 2 phần tử col gần nhau nhất được đẩy lên cạnh nhau*/
+            float: left; /*Căn lề sang trái*/
+            padding: 0 15px;
+        }
+        .row {
+            margin-left: -15px;
+            margin-right: -15px; /*bù khoảng cách cho phần padding 15px của col để nhìn đều hơn, kéo dãn phần tử bên trong row ra*/
+            /* <!-- overflow: hidden; --> Cách 2 của clear: both. Thường không dùng cách này vì có thể sẽ bị ẩn đi các nội dung cần-hiển-thị. */
+        }
+        .row::after {
+            content: ''; /* Không cần hiện content lên màn hình nên không viết content */
+            display: block;
+            clear: both;
+        }
+        /* Dùng row::after vì muốn float áp dụng hết một row nên sau một row sẽ xóa float (clear both) một lần */
+        .clear {
+            clear: both; /*Xóa cả 2. "both" áp dụng cho cả float left và right. Sau phần tử sau cùng trước "clear", thuộc tính float:left không được áp dụng, không tác động đến giao diện của các phần tử sau nữa*/
+        }
+        .form-control {
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 16px;
+            outline: none;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #272727;
+            color: #fff;
+        }
+        textarea::placeholder {
+            font-family: Arial;
+        } /*Đổi font bộ chọn placeholder*/
+    </style>
+</head>
+<body>
+    <section>
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <input class="form-control" type="text" placeholder="First Name">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="text" placeholder="Last Name">
+                </div>
+                <!-- ::after -->
+                <!-- <div class="clear"></div> -->
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input class="form-control" type="text" placeholder="Email">
+                </div>
+                <div class="col">
+                    <input class="form-control"  type="text" placeholder="Phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <select class="form-control" name="" id="">
+                        <option value="">Select Country</option>
+                        <option value="">TP.HCM</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select class="form-control" name="" id="">
+                        <option value="">Select Course</option>
+                        <option value="">JavaScripts</option>
+                    </select>
+                </div>
+            </div>
+            <textarea class="form-control" name="" id="" rows="5" placeholder="Content"></textarea>
+            <div>
+                <button class="btn">Submit</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
