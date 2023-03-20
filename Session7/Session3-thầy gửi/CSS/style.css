@@ -49,10 +49,17 @@ table {
 /*End reset CSS*/
 
 *{box-sizing: border-box;}
+.wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
 .row {
     display: flex;
     flex-flow: row wrap;
-    max-width: 80%;
+    /* max-width: 100%; */
     margin: 0 auto;
     border: 1px solid red;
 }
@@ -67,12 +74,35 @@ table {
 }
 .col-50 {
     width: 50%;
+    justify-content: space-between;
 }
 .col-55 {
     width: 55%;
 }
-.col-75 ul {
+.col-55 ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+.banner_caption {
+    width: 40%;
+    background-color: rgba(255, 143, 39, 0.804);
+    /* opacity: 80%; */
+    position: absolute;
+    left: 160px;
+    top: 400px;
+    color: white;
+}
+.banner_img {
+    display: flex;
+    width: 100%;
+    border: 1px solid red;
+    justify-content: center;
+}
+
+
