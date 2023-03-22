@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    /* color: black; */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* body {
+    background: linear-gradient(45deg, #3ac6c6 0%, rgb(188, 255, 188) 30%, rgb(110, 220, 254) 100%);
+} */
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    width: 100%; /* Chiều rộng của header đang không đủ nên cấp thêm chiều rộng cho header để đạt 100% màn hình */
+    padding: 33px 9%;
+    background: transparent;
+}
+
+.navlist {
+    display: flex; /*Trải các phần tử menu text ra ngang nhau*/
+}
+
+.navlist a {
+    color: brown;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+    /* text-align: center; */
+    /* margin: 0 auto; */
+}
+
+section {
+    /* font-family:'Times New Roman', Times, serif; */
+    display: block;
+    font-size: 32px;
+    line-height: 1.2;
+    color: rgb(120, 16, 16);
+    margin: 0 0 45px;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #3ac6c6 0%, rgb(188, 255, 188) 30%, rgb(110, 220, 254) 100%);
+    /* position: relative; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-content: center;
+    /* grid-template-columns: repeat(2,12); */
+    text-align: center;
+    gap: 2rem;
+}
+
+.hero-text {
+    margin-top: 200px;
+    padding: 50px;
+    width: 40%; 
+}
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-img {
+    margin-top: 100px;
+    width: 60%;
+    height: auto;
+    /* position: absolute; */
+}
+
+.hero-text a {
+    display: inline-block;
+    color: white;
+    background-color: #3ac6c6;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.icofont-navigation-menu {
+    color: brown;
+    font-size: 35px;
+    z-index: 1001;
+    display: none;
+}
+
+@media (max-width: 1195px) {
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .hero-text {
+        padding-top: 115px;
+    }
+}
+
+@media (max-width: 990px) {
+    .icofont-navigation-menu {
+        display: block;
+    }
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: 50px;
+        width: 150px;
+        display: block;
+        background-color: #3ac6c6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 1.5;
+        opacity: 0.8;
+    }
+}

@@ -251,7 +251,7 @@ footer .container {
     padding-right: 20px;
 }
 
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
     .wrap {
         width: 100%;
     }
@@ -291,4 +291,37 @@ footer .container {
     .col {
         width: 100%
     }
+} */
+
+/*Từ 700px đến 1200px*/
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    .main_menu li a {
+        font-size: 10px;
+    }
+    .container {
+        width: 80%;
+    }
+    .banner_caption {
+        width: 30%;
+    }
 }
+
+/*Từ 400px đến 700px*/
+@media screen and (min-width: 400px) and (max-width: 700px) {
+    .container {
+        width: 100%;
+    }
+    .main_menu li a {
+        display: none;
+    }
+    .col-33 {
+        width: 100%
+    }
+    .img_responsive {
+        width: 100%;
+    }
+    .banner_caption {
+        display: none;
+    }
+}
+
