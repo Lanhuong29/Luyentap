@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = prompt('Họ và tên');
+        var email = prompt('Email');
+        var sdt = prompt('Số điện thoại');
+        var diaChi = prompt('Địa chỉ');
+        document.write("<p><b>Họ và tên: </b>" + name + "</p>");
+        document.write(`<p><b>Email: </b> ${email}</p>`); //Sử dụng dấu `` (bỏ "") để đóng mở chuỗi để ghép chuỗi, giảm các dấu cộng biến, ngắt chuỗi,... -> rút gọn chuỗi, giảm bớt bước cộng chuỗi, nối chuỗi
+        //Sử dụng cú pháp ${biến} để chèn biến vào chuỗi
+        document.write(`
+        <p><b>Số điện thoại: </b>${sdt}</p>
+        <p><b>Địa chỉ: </b>${diaChi}
+        `);
+    </script>
+</body>
+</html>
