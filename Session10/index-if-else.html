@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Kiểm tra một số là số chẵn - có 1-2 lựa chọn (if/if-else)
+        var a = 5;
+        if (a % 2 == 0) {
+            console.log(a + " là số chẵn");
+        } else {
+            console.log(a + " là số lẻ");
+        }
+
+        //Xác định giới tính - nhiều hơn 2 lựa chọn (if-(else if)-else)
+        var gt = "Nam";
+        if (gt == "Nam") {
+            
+        } else if (gt == "Nu") {
+
+        } else {
+
+        }
+
+        //switch-case: điều kiện so sánh bằng, nếu expression ở switch bằng value của case nào thì thực thi khối lệnh ở case đó.
+        //Cần dùng từ khóa break để ngăn các case, thực thi xong khối lệnh ở case đó thì chương trình sẽ dừng lại. Nếu không có câu lệnh break thì sau khi thực thi case, chương trình sẽ tiếp tục thực hiện case tiếp theo mà không cần kiểm tra lại điều kiện.
+
+        //Nhập vào giá trị từ 0-6. In ra thứ tương ứng.
+        //VD: 1 -> thứ 2; 2 -> thứ 3; 3 -> thứ 4; ...; 0 -> chủ nhật.
+
+        var thu = 5;
+        switch (thu) {
+            case 0:
+                console.log("Chủ nhật");
+                break;
+            case 1:
+                console.log("Thứ 2");
+                break;
+            case 2:
+                console.log("Thứ 3");
+                break;
+            case 3:
+                console.log("Thứ 4");
+                break;
+            case 4:
+                console.log("Thứ 5");
+                break;
+            case 5:
+                console.log("Thứ 6");
+                break;
+            case 6:
+                console.log("Thứ 7");
+                break;
+            default:
+                console.log("Đầu vào không hợp lệ!");
+        }
+
+        //Vòng lặp for
+        //for ("biểu thức khởi tạo", "biểu thức điều kiện", "biểu thức tăng giảm")
+        //Thứ tự thực hiện lệnh: bt khởi tạo -> điều kiện -> khối lệnh -> tăng giảm -> điều kiện -> khối lệnh -> tăng giảm -> điều kiện -> khối lệnh, ...
+    </script>
+</body>
+</html>

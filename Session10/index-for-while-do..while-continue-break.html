@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Vòng lặp for
+        //for ("biểu thức khởi tạo", "biểu thức điều kiện", "biểu thức tăng giảm")
+        //Thứ tự thực hiện lệnh: bt khởi tạo -> điều kiện -> khối lệnh -> tăng giảm -> điều kiện -> khối lệnh -> tăng giảm -> điều kiện -> khối lệnh, ...
+        
+        for (var i = 1; i <= 10; i++ ) { //i+=1
+            console.log(i);
+        }
+
+
+
+        //Vòng lặp while (hỏi trước làm sau, nếu điều kiện sai ngay lần đầu tiên thì không thực thi câu lệnh 1 lần nào cả)
+        //Chương trình kiểm tra điều kiện while, nếu điều kiện đúng thì chương trình thực hiện khối lệnh trong while
+        //While (biểu thức điều kiện) {}
+        
+        // i = 1;
+        // while (i <= 10) {
+        //     console.log(i);
+        //     // i++;
+        //     i+=2;
+        // }
+
+
+
+
+        //Vòng lặp do..while (làm trước hỏi sau, chương trình được thực thi ít nhất 1 lần sau do - trước while, cho đến khi gặp điều kiện sai sau while)
+        
+        // var coChemKhong = true;
+        // do {
+        //     console.log("Chém");
+        //     coChemKhong = false;
+        // } while(coChemKhong);
+
+
+
+        //Xác định 1 số có phải số nguyên tố hay không?
+        //logic:
+        //1. Sử dụng biến check để kiểm tra xem kết quả có chia hết hay không (bởi vì việc chia số n cho số i được thực hiện nhiều lần nên chỉ dùng if-else kiểm tra từng phép chia sẽ không kiểm tra được hết tất cả các số i có thể được chia và không tối ưu được số lần thực thi vòng lặp)
+        //2. Sử dụng break để tối ưu chương trình, kết thúc vòng lặp ngay khi thấy có một kết quả số đã có chia hết cho bất kỳ số nào trong khoảng 2 -> n-1 (vì số nguyên tố là số chỉ chia hết cho 1 và chính nó)
+        //3. Sử dụng điều kiện if-else để kiểm tra biến check (viết tắt if(check) tương đương if(check==true); tương tự, if(!check) tương đương if(check==false). Chỉ viết tắt cho phép so sánh logic)
+        var n = 7;
+        var check = true;
+        for (i = 2; i < n; i++) {
+            console.log(i);
+            if (n % i == 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            console.log (n + " là số nguyên tố");
+        } else {
+            console.log (n + " không phải là số nguyên tố")
+        }
+
+        //continue: dừng vòng lặp tại đó và nhảy qua vòng lặp tiếp theo. (bỏ qua một số lệnh nào đó để chuyển sang lệnh tiếp theo)
+    </script>
+</body>
+</html>
