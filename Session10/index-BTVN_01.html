@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Khai báo
+    var arrayInt = [];
+
+    //a. Nhập 5 giá trị số nguyên cho mảng từ bàn phím
+    for (let i = 0; i < 5; i++) {
+    arrayInt[i] = parseInt(prompt("Nhập giá trị số nguyên thứ " + (i+1) + ": "));
+    }
+
+
+    //b. Hiển thị giá trị các phần tử của mảng
+    console.log("Các phần tử trong mảng là: " + arrayInt);
+
+
+    //c. In các phần tử có giá trị chẵn và tính tổng
+    let tongGiaTriChan = 0;
+    for (let i = 0; i < arrayInt.length; i++) {
+    if (arrayInt[i] % 2 == 0) {
+        console.log("Phần tử có giá trị chẵn: " + arrayInt[i]);
+        tongGiaTriChan += arrayInt[i];
+    }
+    }
+    console.log("Tổng các phần tử có giá trị chẵn là: " + tongGiaTriChan);
+
+
+    //d. In các phần tử có chỉ số lẻ và tính tổng
+    let tongChiSoLe = 0;
+    for (let i = 1; i < arrayInt.length; i += 2) {
+    console.log("Phần tử có chỉ số lẻ: " + arrayInt[i]);
+    tongChiSoLe += arrayInt[i];
+    }
+    console.log("Tổng các phần tử có chỉ số lẻ là: " + tongChiSoLe);
+
+
+    //e. In giá trị các phần tử trong mảng là số nguyên tố
+    let soNguyenTo = [];
+    for (let i = 0; i < arrayInt.length; i++) {
+    let check = true;
+        for (let j = 2; j < arrayInt[i]; j++) {
+            // console.log(i);
+            if (arrayInt[i] % j == 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            soNguyenTo.push(arrayInt[i]);
+            //hàm push() được sử dụng để thêm một phần tử vào cuối của mảng
+            //Trong trường hợp này, giá trị của arrayInt[i] được thêm vào cuối mảng soNguyenTo nếu nó là số nguyên tố.
+        }
+    }
+    console.log ("Các số nguyên tố trong mảng: " + soNguyenTo.join(", "));
+    //soNguyenTo.join(", ") là phương thức của mảng soNguyenTo để tạo ra một chuỗi mới bằng cách nối các phần tử trong mảng với nhau bằng dấu phẩy và khoảng trắng.
+
+            //Tham khảo:
+                // function isPrime(n) {
+                // if (n <= 1) {
+                //     return false;
+                // }
+                // for (let i = 2; i <= Math.sqrt(n); i++) {
+                //     if (n % i == 0) {
+                //     return false;
+                //     }
+                // }
+                // return true;
+                // }
+                // console.log("Các phần tử là số nguyên tố là: ");
+                // for (let i = 0; i < arrayInt.length; i++) {
+                // if (isPrime(arrayInt[i])) {
+                //     console.log(arrayInt[i]);
+                // }
+                // }
+    
+    
+
+    // Tìm và in các phần tử có giá trị là max hoặc min
+    let max = arrayInt[0];
+    let min = arrayInt[0];
+    for (let i = 1; i < arrayInt.length; i++) {
+    if (arrayInt[i] > max) {
+        max = arrayInt[i];
+    }
+    if (arrayInt[i] < min) {
+        min = arrayInt[i];
+    }
+    }
+    console.log("Max = " + max);
+    console.log("Min = " + min);
+    // console.log("Các phần tử có giá trị là max hoặc min là: ");
+    // for (let i = 0; i < arrayInt.length; i++) {
+    // if (arrayInt[i] == max || arrayInt[i] == min) {
+    //     console.log(arrayInt[i]);
+    // }
+    // }
+
+
+    //g. Sắp xếp mảng giảm dần và in giá trị các phần tử mảng sau khi sắp xếp (không và có sử dụng hàm sort)
+    for (let i = 0; i < arrayInt.length - 1; i++) {
+    for (let j = i + 1; j < arrayInt.length; j++) {
+        if (arrayInt[i] < arrayInt[j]) {
+        let soSoSanh = arrayInt[i];
+        arrayInt[i] = arrayInt[j];
+        arrayInt[j] = soSoSanh;
+        }
+    }
+    }
+    console.log(`Các phần tử của mảng sau khi sắp xếp giảm dần là: ${arrayInt.join(", ")}`);
+
+
+    //h. Nhập vào một số nguyên và thống kê có bao nhiêu phần tử có giá trị như vậy
+    let number = parseInt(prompt("Nhập số nguyên cần thống kê:"));
+    let count = 0;
+    for (let i = 0; i < arrayInt.length; i++) {
+    if (arrayInt[i] === number) {
+        count++;
+    }
+    }
+    console.log(`Có ${count} phần tử trong mảng có giá trị bằng ${number}`);
+    //Biến count được sử dụng để đếm số lần xuất hiện của giá trị nhập vào từ bàn phím trong mảng. Khi duyệt qua từng phần tử của mảng, nếu giá trị phần tử đó bằng giá trị nhập vào từ bàn phím thì biến count sẽ được tăng lên 1 đơn vị.
+        
+    </script>
+</body>
+</html>
