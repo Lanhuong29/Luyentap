@@ -105,13 +105,13 @@
 
     //g. Sắp xếp mảng giảm dần và in giá trị các phần tử mảng sau khi sắp xếp (không và có sử dụng hàm sort)
     for (let i = 0; i < arrayInt.length - 1; i++) {
-    for (let j = i + 1; j < arrayInt.length; j++) {
-        if (arrayInt[i] < arrayInt[j]) {
-        let soSoSanh = arrayInt[i];
-        arrayInt[i] = arrayInt[j];
-        arrayInt[j] = soSoSanh;
+        for (let j = i + 1; j < arrayInt.length; j++) {
+            if (arrayInt[i] < arrayInt[j]) {
+            let soSoSanh = arrayInt[i];
+            arrayInt[i] = arrayInt[j];
+            arrayInt[j] = soSoSanh;
+            }
         }
-    }
     }
     console.log(`Các phần tử của mảng sau khi sắp xếp giảm dần là: ${arrayInt.join(", ")}`);
 
