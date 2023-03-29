@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arrInt = [];
+
+        console.log("Các phần tử của mảng là: ");
+            // for (let i = 0; i < arrInt.length; i++) {
+            //     let r = '';
+            //     for (let j = 0; j < arrInt[i].length; j++) {
+            //         // console.log(arrInt[i][j]);
+            //         r += arrInt[i][j] + " ";
+            //     }
+            //     console.log(r);
+            // }
+
+        //for .. in: Duyệt theo hàng (duyệt theo key, tương đương với index), không cần biết trước số lần lặp (khÔng cần chỉ định điều kiện dừng cho biến). Khi biến chạy đến giá trị cuối cùng thì biến sẽ tự động dừng.
+        //for .. of: Duyệt theo giá trị (duyệt theo value), không cần biết trước số lần lặp.
+
+            // for (let i in arrInt) {
+            //     let r = '';
+            //     for (let v of arrInt[i]) {
+            //         r += v + " ";
+            //     }
+            //     console.log(r);
+            // }
+        
+            //Thay i thành a, trong code không cần sử dụng i và arrInt[i]
+            //Thay for..in > for..of thành for..of > for..of
+            //Nếu dùng for..in bên ngoài thì ở for..of bên trong cần phải gọi giá trị arrInt[i]
+            //Còn nếu dùng for..of bên ngoài thì ở for..of bên trong có thể gọi thẳng giá trị của a
+
+            // for (let a of arrInt) {
+            //     let r = '';
+            //     for (let v of a) {
+            //         r += v + " ";
+            //     }
+            //     console.log(r);
+            // }
+        
+
+        //Dùng join để thêm ký tự cách giữa các giá trị và in thẳng ra màn hình
+        for (let a in arrInt) {
+            console.log(a.join(", "));
+        }
+    </script>
+
+
+</body>
+</html>

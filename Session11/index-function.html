@@ -7,15 +7,45 @@
     <title>Document</title>
 </head>
 <body>
-    var arrInt = [];
-    console.log("Các phần tử của mảng là: ");
-    for (let i = 0; i < arrInt.length; i++) {
-        let r = '';
-        for (let j = 0; j < arrInt[i].length; j++) {
-            // console.log(arrInt[i][j]);
-            r += arrInt[i][j] + " ";
+    <script>
+    //Định nghĩa hàm/phương thức KHÔNG CÓ KIỂU TRẢ VỀ
+        //Hàm xinChao có 01 tham số "ten"
+        function xinChao(ten) {
+                //Trường hợp muốn gán giá trị mặc định cho hàm thì gắn trực tiếp giá trị vào hàm trong ngoặc. Nếu giá trị mới được truyền vào thì giá trị hàm sẽ thay đổi theo giá trị mới. Còn nếu không có giá trị mới truyền vào thì hàm sẽ giữ giá trị mặc định đã được truyền vào.
+                //function xinChao(ten = "Javascripts") {
+            //Các câu lệnh của hàm
+            console.log("Xin chào các bạn!");
+            console.log("Tên tôi là " + ten);
         }
-        console.log(r);
-    }
+        //Nếu chưa gọi hàm thì máy chỉ lưu lại hàm, còn các câu lệnh trong hàm chưa được thực thi
+
+
+        //Gọi hàm, khi này các câu lệnh trong hàm mới được thực thi
+        //Khi gọi hàm, cần phải đưa giá trị vào tham số. Nếu không thì chương trình sẽ trả lại giá trị undefined
+        xinChao("HuongNTL");
+        xinChao("Lan");
+
+
+    //Định nghĩa hàm/phương thức CÓ KIỂU TRẢ VỀ
+        function tinhTong(a, b) {
+            return a + b; //câu lệnh return để trả về giá trị của hàm
+        }
+        function tinhHieu(a, b) {
+            return a - b;
+        }
+        var tong = tinhTong(5, 7);
+            hieu = tinhHieu(5, 7);
+        console.log(tong);
+
+    
+    //Arrow function: hàm nặc danh
+        var hello = () => {
+            console.log("Hello World!");
+        }
+    // Phần hàm trên lý thuyết (nhưng không có tên):
+        //             () => {
+        //     console.log("Hello World!");
+        // }
+    </script>
 </body>
 </html>
