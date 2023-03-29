@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Khi chương trình phức tạp, cần sử dụng đoạn chức năng giống nhau nhiều lần thì có thể sử dụng hàm để có thể dùng khi cần thiết thông qua tên mảng.
+    
+        // function findArray(arr, key) {
+        //     let search = [];
+        //     for (let item of arr) {
+        //         search[search.length] = item;
+        //     }
+        //     return search;
+        // }
+
+        //Ví dụ áp dụng mảng để tìm phần tử:
+            // var numbers = [1,2,3,4,5,6,5,4,3,2,1];
+            // var names = ['Hương', 'Đức', 'Hương', 'Thành'];
+            // console.log(findArray(numbers, 2));
+            // console.log(findArray(names, 'Hương'));
+
+        //Khai báo mảng lưu tên danh sách các bạn trong lớp.
+        //Tên nhập từ bàn phím. Nhập kết thúc khi người dùng nhấp Cancel trên pop-up promt().
+        //Tìm tên những bạn có vần "ng" trong tên, không phân biệt chữ hoa thường
+
+        //Khai báo mảng
+        var sinhViens = [];
+        //Dùng vòng lặp nhập tên
+        var flag = true;
+        //While (flag): Nếu flag đúng điều kiện ban đầu là true thì chạy khối lệnh trong while
+        while (flag) {
+            let name = prompt("Nhập tên sinh viên:");
+            if (name != null) {
+                sinhViens.push(name);
+            } else {
+                flag = false;
+            }
+                // if (name == null) {
+                //     break;
+                //     // console.log("Kết thúc"); (không hiển thị)
+                // }
+                // sinhViens.push(name);
+        }
+        console.log(sinhViens);
+        //Dùng mảng tìm các tên phù hợp với tên vừa nhập
+        //Cách tìm từ có chữa trong chuỗi hay không
+        //"chuỗi".indexOf("key") -> tìm thấy trả về index key cần tìm
+        //Ngược lại trả về -1
+        //Dùng toLocaleLowerCase() để chuyển tên về chữ thường sau đó tìm kiếm
+        //indexOf là hàm tìm VỊ TRÍ của chuỗi ('ng') trong chuỗi 'item'
+        for(let item of sinhViens) {
+            if (item.toLocaleLowerCase().indexOf('ng') >= 0) {
+                console.log(item);
+            }
+        }
+    </script>
+</body>
+</html>
