@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //5. Khai báo và khởi tạo mảng 1 chiều số nguyên. Nhập vào 2 số nguyên a, b. Khởi tạo mảng gồm các phần tử của mảng số nguyên mà giá trị nằm giữa a và b
+    let a = parseInt(prompt("Nhập số nguyên a:"));
+    let b = parseInt(prompt("Nhập số nguyên b:"));
+
+    let arr = [];
+
+    for (let i = a + 1; i < b; i++) {
+    arr.push(i);
+    }
+
+    console.log(`Mảng gồm các phần tử nằm giữa ${a} và ${b}:`);
+    console.log(arr);
+
+    </script>
+</body>
+</html>

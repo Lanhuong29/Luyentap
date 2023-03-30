@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //4. Khai báo mảng một chiều
+    //a. Cho phép người dùng nhập các giá trị của mảng bằng hàm prompt và lưu trữ giá trị trong mảng cho đến khi người dùng nhập một giá trị không phải là số, một chuỗi trống hoặc nhấn “Cancel”
+    var arr = [];
+    let input = prompt("Nhập giá trị cho mảng, nhập giá trị không phải số hoặc chuỗi trống để kết thúc");
+    while (input !== null && !isNaN(input) && input !== "") {
+    arr.push(Number(input));
+    input = prompt("Nhập giá trị cho mảng, nhập giá trị không phải số hoặc chuỗi trống để kết thúc");
+    }
+
+    //b. Tính tổng các giá trị của mảng
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    }
+
+    //In ra phần tử có giá trị max - min (không sử dụng hàm Math.max và Math.min)
+    let max = arr[0];
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+        max = arr[i];
+    }
+    if (arr[i] < min) {
+        min = arr[i];
+    }
+    }
+
+    //In ra phần tử có giá trị max - min (có sử dụng hàm Math.max và Math.min)
+
+    // Hiển thị kết quả
+    console.log("Mảng đã nhập:", arr);
+    console.log("Tổng các giá trị của mảng:", sum);
+    console.log("Phần tử có giá trị lớn nhất trong mảng:", max);
+    console.log("Phần tử có giá trị nhỏ nhất trong mảng:", min);
+    console.log("Giá trị của phần tử có giá trị lớn nhất và nhỏ nhất trong mảng: " + max + " & " + min);
+    </script>
+</body>
+</html>
