@@ -15,7 +15,7 @@
     styles.push("Rock-n-Roll");
 
     //b. Thay thế phần tử nằm chính giữa mảng bằng “Classics” nếu mảng có tổng số phần tử là lẻ
-    if (styles.length % 2 === 1) {
+    if (styles.length % 2 !== 0) {
     let middleIndex = Math.floor(styles.length / 2);
     styles[middleIndex] = "Classics";
     }
