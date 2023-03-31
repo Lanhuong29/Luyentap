@@ -46,19 +46,19 @@
         //Bài 2:
             //Trong bài toán này, nếu phần tử đầu tiên của mảng là số chẵn thì không cần phải ghép số đó với số trước nó nữa. Vì vậy cần kiểm tra xem phần tử hiện tại có phải là phần tử đầu tiên của mảng không bằng cách dùng điều kiện (i > 0). Nếu phần tử hiện tại không phải là phần tử đầu tiên thì kiểm tra xem cặp số liền kề có cùng chẵn hay không.
 
-            let input = prompt("Nhập dãy số của bạn:");
-            let output = "";
+            // let input = prompt("Nhập dãy số của bạn:");
+            // let output = "";
 
-            for (let i = 0; i < input.length; i++) {
-                if (i == 0 && input[i] % 2 == 0) {
-                    output += input[i];
-                } else if (i > 0 && input[i - 1] % 2 == 0 && input[i] % 2 == 0) {
-                    output += "-" + input[i];
-                } else {
-                    output += input[i];
-                }
-            }
-            console.log(output);
+            // for (let i = 0; i < input.length; i++) {
+            //     if (i == 0 && input[i] % 2 == 0) {
+            //         output += input[i];
+            //     } else if (i > 0 && input[i - 1] % 2 == 0 && input[i] % 2 == 0) {
+            //         output += "-" + input[i];
+            //     } else {
+            //         output += input[i];
+            //     }
+            // }
+            // console.log(output);
 
 
             // let str = "025468";
@@ -86,7 +86,43 @@
 
             // console.log(output);
 
+            // //Cách 2:
+            // let str = "The Quick Brown Fox";
+            // let result = "";
+            // for (let i = 0; i < str.length; i++) {
+            //     let addText = str[i];
+            //     if (addText === addText.toUpperCase()) {
+            //         result += addText.toLocaleUpperCase();
+            //     } else {
+            //         result += addText.toUpperCase();
+            //     }
+            // }
 
+            // console.log(result);
+
+            
+            // //Bài 4:
+            // let input = prompt("Nhập dãy số, các số cách nhau bởi dấu phẩy:");
+            // let numbers = input.split(",");
+            // let sum = 0;
+            // for (let i = 0; i < numbers.length; i++) {
+            //     sum += Number(numbers[i]);
+            // }
+
+            // console.log("Tổng các số là: " + sum);
+
+
+            //Bài 5:
+            let inputUser = prompt("Nhập dãy số, cách nhau bằng dấu , ");
+            let nums = inputUser.split(",");
+            let min = Number(nums[0]);
+            for (let i = 0; i < nums.length; i++) {
+                let currentNum = Number(nums[i]);
+                if (currentNum < min) {
+                    min = currentNum;
+                }
+            }
+            console.log(`Số nhỏ nhất là ${min}`);
     </script>
 </body>
 </html>
