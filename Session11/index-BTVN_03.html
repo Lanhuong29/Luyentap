@@ -15,18 +15,21 @@
     styles.push("Rock-n-Roll");
 
     //b. Thay thế phần tử nằm chính giữa mảng bằng “Classics” nếu mảng có tổng số phần tử là lẻ
-    if (styles.length % 2 !== 0) {
-    let middleIndex = Math.floor(styles.length / 2);
+    if (styles.length % 2 != 0) {
+    let middleIndex = (styles.length - 1) / 2; //Chỉ sử dụng trong trường hợp số phần tử của mảng là số lẻ
     styles[middleIndex] = "Classics";
     }
 
     //c. Xóa phần tử đầu tiên của mảng và hiển thị mảng
     styles.shift();
     console.log(styles);
+    //Hàm shift() dùng để xóa phần tử đầu tiên của mảng và trả về giá trị của phần tử đó. Trong trường hợp này, vì ta không cần giá trị của phần tử bị xóa nên không cần gán giá trị trả về cho biến nào cả.
+
 
     //d. Thêm phần tử “Rap” và “Reggae” vào đầu mảng và hiển thị
     styles.unshift("Rap", "Reggae");
-    console.log(styles);   
+    console.log(styles);
+    //Hàm unshift() là một phương thức để thêm một hoặc nhiều phần tử vào đầu mảng và trả về độ dài mới của mảng đó.
     </script>
 </body>
 </html>
