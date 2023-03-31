@@ -16,7 +16,9 @@
     arr.push(Number(input));
     input = prompt("Nhập giá trị cho mảng (nhập giá trị không phải số hoặc chuỗi trống để kết thúc)");
     }
-
+    //isNaN được sử dụng để kiểm tra xem một giá trị có phải là NaN (Not a Number) hay không. NaN là một giá trị đặc biệt của kiểu dữ liệu số trong JavaScript, nó được trả về khi một phép toán số không cho kết quả là một số hợp lệ (ví dụ: chia một số cho 0). 
+    //Có thể sử dụng while để kiểm tra xem input nhập vào có phải số (number) hay không bằng toán tử typeof (trả về kiểu dữ liệu của giá trị)
+        
     //b. Tính tổng các giá trị của mảng
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -36,6 +38,7 @@
     }
 
     //In ra phần tử có giá trị max - min (có sử dụng hàm Math.max và Math.min)
+        //Note chưa làm
 
     // Hiển thị kết quả
     console.log("Mảng đã nhập:", arr);
