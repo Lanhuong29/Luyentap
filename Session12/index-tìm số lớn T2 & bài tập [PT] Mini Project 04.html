@@ -34,23 +34,42 @@
             // console.log(chuoi1);
             // console.log(chuoi2);
 
-
-        //Bài 2:
-            // let input = prompt("Nhập dãy số của bạn:");
-            // let output = "";
-
+            // //Cách 3:
+            // let result = "";
             // for (let i = 0; i < input.length; i++) {
-            //     if (i == 0 && input[i] % 2 == 0) {
-            //         output += input[i];
-            //     } else if (i > 0 && input[i - 1] % 2 == 0 && input[i] % 2 == 0) {
-            //         output += "-" + input[i];
-            //     } else {
-            //         output += input[i];
-            //     }
+            //      result += myColor[i];
+            //      if (i !== myColor.length -1) {
+            //          result += ", ";    
+            //    }
             // }
-            // console.log(output);
+            // console.log(result);
+        //Bài 2:
+            //Trong bài toán này, nếu phần tử đầu tiên của mảng là số chẵn thì không cần phải ghép số đó với số trước nó nữa. Vì vậy cần kiểm tra xem phần tử hiện tại có phải là phần tử đầu tiên của mảng không bằng cách dùng điều kiện (i > 0). Nếu phần tử hiện tại không phải là phần tử đầu tiên thì kiểm tra xem cặp số liền kề có cùng chẵn hay không.
+
+            let input = prompt("Nhập dãy số của bạn:");
+            let output = "";
+
+            for (let i = 0; i < input.length; i++) {
+                if (i == 0 && input[i] % 2 == 0) {
+                    output += input[i];
+                } else if (i > 0 && input[i - 1] % 2 == 0 && input[i] % 2 == 0) {
+                    output += "-" + input[i];
+                } else {
+                    output += input[i];
+                }
+            }
+            console.log(output);
 
 
+            // let str = "025468";
+            // let result = [str[0]];
+            // for (let i = 1; i < str.length; i++) {
+            // //Kiểm tra nếu ký tự trước đó và ký tự hiện tại là số chẵn thì thêm dấu "-"   
+            //      result.push("-", str[i]);
+            //      } else {
+            //          result.push(str[i]);
+            //      }
+            // }
         //Bài 3:
             // let input = 'The Quick Brown Fox';
             // let output = '';
