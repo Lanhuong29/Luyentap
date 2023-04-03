@@ -178,67 +178,91 @@
         
 
         //Làm bài tập không cần dùng callbackFunc
-        //Viết function trả ra giá trị lớn nhất trong một mảng số
-            function max(arr) {
-            let max = arr[0];
-            for (let i = 1; i < arr.length; i++) {
-                if (arr[i] > max) {
-                max = arr[i];
-                }
-            }
-            return max;
-            }
+        // //Viết function trả ra giá trị lớn nhất trong một mảng số
+        //     function max(arr) {
+        //     let max = arr[0];
+        //     for (let i = 1; i < arr.length; i++) {
+        //         if (arr[i] > max) {
+        //         max = arr[i];
+        //         }
+        //     }
+        //     return max;
+        //     }
 
-            let arr = [1, 2, 3, 4, 5];
-            console.log(max(arr));
+        //     let arr = [1, 2, 3, 4, 5];
+        //     console.log(max(arr));
 
         //Viết function kiểm tra số chẵn-lẻ, nguyên tố, hoàn hảo
-            //Hàm kiểm tra số chẵn-lẻ:
-            function chanLe(num) {
-            return num % 2 === 0;
-            }
-            console.log(chanLe(4));
-            console.log(chanLe(3));
+            // //Hàm kiểm tra số chẵn-lẻ:
+            // function chanLe(num) {
+            // return num % 2 === 0;
+            // }
+            // console.log(chanLe(4));
+            // console.log(chanLe(3));
 
 
 
-            //Hàm kiểm tra số nguyên tố:
-            function nguyenTo(num) {
-            if (num < 2) return false;
-            for (let i = 2; i <= num; i++) {
-                if (num % i == 0) return false;
-            }
-            return true;
-            }
-            console.log(nguyenTo(7));
-            console.log(nguyenTo(8));
+            // //Hàm kiểm tra số nguyên tố:
+            // function nguyenTo(num) {
+            // if (num < 2) return false;
+            // for (let i = 2; i <= num; i++) {
+            //     if (num % i == 0) return false;
+            // }
+            // return true;
+            // }
+            // console.log(nguyenTo(7));
+            // console.log(nguyenTo(8));
 
 
 
             //Hàm kiểm tra số hoàn hảo:
             //Số hoàn hảo (perfect number) là một số tự nhiên mà tổng các ước số của nó (trừ chính nó) bằng chính nó. Ví dụ, số 6 là một số hoàn hảo bởi vì các ước số của 6 là 1, 2 và 3, và tổng của chúng là 1 + 2 + 3 = 6. Một số khác là 28, vì 1 + 2 + 4 + 7 + 14 = 28.
-            function soHoanHao(num) {
-            let sum = 0;
-            for (let i = 1; i <= num / 2; i++) {
-                if (num % i == 0) sum += i;
+            // function soHoanHao(num) {
+            // let sum = 0;
+            // for (let i = 1; i <= num / 2; i++) {
+            //     if (num % i == 0) sum += i;
+            // }
+            // return sum === num;
+            // }
+            // console.log(soHoanHao(6));
+            // console.log(soHoanHao(7));
+
+            //Kiểm tra số hoàn hảo (thầy chữa):
+            function soHoanHao01(number) {
+                let total = 0;
+                for (let i = 1; i < number; i++) {
+                    if (number % i == 0)
+                        total += i;
+                }
+                if (total == number)
+                    console.log(number + " là số hoàn hảo");
+                else
+                    console.log(number + " không phải là số hoàn hảo");
             }
-            return sum === num;
-            }
-            console.log(soHoanHao(6));
-            console.log(soHoanHao(7));
+            soHoanHao01(8);
 
 
         //Viết function trả ra trung bình cộng của một mảng số
-            //Để trả ra trung bình cộng của một mảng số, có thể sử dụng hàm reduce() để tính tổng các phần tử trong mảng, sau đó chia cho độ dài của mảng.
-            function average(array2) {
-            if (array2.length === 0) return 0;
-            const sum = array2.reduce((a, b) => a + b);
-            return sum / array2.length;
-            }
+            // //Để trả ra trung bình cộng của một mảng số, có thể sử dụng hàm reduce() để tính tổng các phần tử trong mảng, sau đó chia cho độ dài của mảng.
+            // function average(array2) {
+            // if (array2.length === 0) return 0;
+            // const sum = array2.reduce((a, b) => a + b);
+            // return sum / array2.length;
+            // }
 
-            // Sử dụng
-            let array2 = [1, 2, 3, 4, 5];
-            console.log(average(array2));
+            // // Sử dụng
+            // let array2 = [1, 2, 3, 4, 5];
+            // console.log(average(array2));
+
+
+            function tinhTBMang(arr) {
+                let tong = 0;
+                for (let item of arr) {
+                    tong += item;
+                }
+                return tong / arr.length;
+            }
+            console.log(tinhTBMang([1,2,3,4,5,6]));
 
     </script>
 </body>
