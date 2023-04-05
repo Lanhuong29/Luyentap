@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bài 6:
+        // Tạo một mảng với ít nhất 5 số
+        let numbers = [3, 5, 7, 9, 11];
+
+        // Yêu cầu người dùng nhập một số
+        let input = prompt("Nhập một số:");
+
+        // Tìm kiếm số trong mảng
+        let index = numbers.indexOf(parseInt(input));
+
+        // Kiểm tra xem số có được tìm thấy hay không
+        if (index != -1) {
+            console.log("Số " + input + " được tìm thấy tại vị trí " + index + " trong mảng");
+        } else {
+            console.log("Số " + input + " không được tìm thấy trong mảng");
+        }
+
+        
+
+        // Bài 7:
+        // // 7.1
+        // let sheepSizes = [5, 7, 300, 90, 24, 50, 75];
+        // console.log("Kích thước đàn cừu ban đầu là: " + sheepSizes.join(", "));
+
+        // // 7.2
+        // let maxSheepSize = Math.max(...sheepSizes);
+        // // Phương thức Math.max() để tìm giá trị lớn nhất trong mảng sheepSizes. Để áp dụng phương thức này vào mảng, chúng ta sử dụng toán tử spread syntax (...), giúp tách các giá trị trong mảng và chuyển chúng vào hàm Math.max().
+        // console.log("Cừu lớn nhất trong đàn có kích thước là: " + maxSheepSize);
+
+        // // 7.3
+        // let cutSheepIndex = sheepSizes.indexOf(maxSheepSize);
+        // sheepSizes[cutSheepIndex] = 8;
+        // console.log("Sau khi cạo lông, đàn cừu trông như sau: " + sheepSizes.join(", "));
+
+        // // 7.4
+        // for (let i = 0; i < sheepSizes.length; i++) {
+        // sheepSizes[i] += 50;
+        // }
+        // console.log("Sau một tháng, đàn cừu trông như sau: " + sheepSizes.join(", "));
+
+        // // 7.5
+        // maxSheepSize = Math.max(...sheepSizes);
+        // console.log("Cừu lớn nhất hiện tại trong đàn có kích thước là: " + maxSheepSize);
+        // cutSheepIndex = sheepSizes.indexOf(maxSheepSize);
+        // sheepSizes[cutSheepIndex] = 8;
+        // console.log("Sau khi cạo lông cừu lớn nhất, đàn cừu trông như sau: " + sheepSizes.join(", "));
+
+        // // 7.6
+        // for (let month = 1; month <= 3; month++) {
+        // console.log("Tháng " + month + ":");
+        // for (let i = 0; i < sheepSizes.length; i++) {
+        //     sheepSizes[i] += 50;
+        // }
+        // console.log("Sau một tháng, đàn cừu trông như sau: " + sheepSizes.join(", "));
+        // maxSheepSize = Math.max(...sheepSizes);
+        // console.log("Cừu lớn nhất hiện tại trong đàn có kích thước là: " + maxSheepSize);
+        // cutSheepIndex = sheepSizes.indexOf(maxSheepSize);
+        // sheepSizes[cutSheepIndex] = 8;
+        // console.log("Sau khi cạo lông cừu lớn nhất, đàn cừu trông như sau: " + sheepSizes.join(", "));
+        // }
+
+        // // 7.7
+        // let totalSheepSize = sheepSizes.reduce((total, size) => total + size);
+        // // Phương thức reduce() thường được sử dụng để tính toán giá trị thu gọn (reduced value) của mảng, thông qua việc lặp lại các phần tử và tính toán một giá trị kết hợp từ chúng. Cụ thể trong dòng code này, hàm reduce() nhận vào một callback function với hai tham số là total và size, trong đó total là tổng kích thước đã tính được cho đến phần tử hiện tại, size là kích thước của phần tử hiện tại. Hàm callback này trả về tổng kích thước cộng thêm kích thước của phần tử hiện tại, được lưu lại vào biến total. Kết quả trả về của hàm reduce() chính là tổng kích thước của tất cả các con cừu trong mảng sheepSizes.
+        // // Trong hàm reduce, tham số đầu tiên thường được gọi là accumulator (hay biến total như trong dòng code trên), nó lưu trữ giá trị tích lũy trong quá trình duyệt qua mảng.
+        // // Biến total sẽ được khởi tạo với giá trị ban đầu là giá trị truyền vào trong tham số thứ 2 của hàm reduce. Nếu không truyền giá trị này, nó sẽ tự động lấy phần tử đầu tiên của mảng để làm giá trị ban đầu của biến total. Sau đó, mỗi lần duyệt qua một phần tử trong mảng, hàm reduce sẽ thực hiện phép tính trên biến total dựa trên giá trị của phần tử hiện tại và kết quả được trả về sẽ được gán cho biến total. Do đó, biến total không cần phải được khai báo trước khi sử dụng trong hàm reduce.
+        // console.log("Tổng kích thước đàn cừu là: " + totalSheepSize);
+        // let expectedRevenue = totalSheepSize * 2;
+        // console.log("Số tiền dự kiến từ việc bán đàn cừu là: " + expectedRevenue + " triệu đồng.");
+
+    </script>
+</body>
+</html>
