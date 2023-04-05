@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Function là "chương trình con", là một đoạn tập hợp các câu lệnh để thực hiện một tác vụ cụ thể
+        //Để TÁI SỬ DỤNG đoạn code
+        //Dễ bảo trì hơn, tối ưu hơn
+        
+        // //I. Khai báo, định nghĩa function
+        // //1. Định nghĩa function (Định nghĩa hàm thông thường, TÁI SỬ DỤNG ok)
+        // function hello() {
+        //     console.log("Xin chào các bạn!");
+        // }
+        // hello(); //2. Gọi tên hàm
+
+        // //2. Định nghĩa tên hàm, viết biểu thức và gán cho biến (Định nghĩa hàm thông thường, TÁI SỬ DỤNG ok)
+        // var fnc_expression = function() {
+        //     console.log("Function Expression");
+        // }
+        // fnc_expression();
+
+        // //3. Định nghĩa hàm và sử dụng luôn (Sử dụng 1 lần)
+        // (function(param) {
+        //     console.log("IIFE" + param);
+        // })("Đối số");
+        // //Khi viết function dạng expression thì phải gán cho nó một tên biến
+        // //Nếu không gán thì phải gọi luôn ngay sau đó
+
+        // //4. Arrow function (Sử dụng khi định nghĩa cho callback function)
+        // var arrow_fnc = () => console.log("Arrow function");
+        // arrow_fnc();
+
+
+        // //II.Truyền tham chiều & truyền tham trị
+        // //1. Truyền tham trị
+        // var increNumber = (num) => {
+        //     num += 10;
+        //     console.log(num);
+        // }
+        // var a = 5;
+        // increNumber(a);
+        // console.log("Sau khi hàm thực thi a = " + a);
+
+        // //2. Truyền tham chiếu
+        // var passReferenceFunc = (arr) => {
+        //     arr[0] += 10;
+        //     console.log(arr[0]);
+        // }
+        // var numbers = [];
+        // numbers[0] = 16;
+        // passReferenceFunc(numbers);
+        // console.log("Sau khi hàm thực thi numbers[0] = " + numbers[0]);
+
+
+
+        // //III. Callback function
+        // var checkNumber = function(number, callbackFnc) {
+        //     //Xử lý nhiều hơn ở đây trong thực tế
+        //     callbackFnc(number);
+        // }
+        // function funcArg(number) {
+        //     if (number % 2 == 0) {
+        //         console.log(number + " là số chẵn");
+        //     } else {
+        //         console.log(number + " là số lẻ");
+        //     }
+        // }
+        // function funcArg1(number) {
+        //     if (number >= 0) {
+        //         console.log(number + " là số dương");
+        //     } else {
+        //         console.log(number + " là số âm");
+        //     }
+        // }
+        // checkNumber(5, funcArg);
+        // checkNumber(5, funcArg1);
+
+
+
+        // //IV. Code ví dụ:
+        // var sortArrayNumber = function(arr, callbackFnc) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = i + 1; j < arr.length; j++) {
+        //             if (arr[i] < arr[j]) {
+        //                 let temp = arr[i];
+        //                 arr[i] = arr[j];
+        //                 arr[j] = temp;
+        //             }
+        //         }
+        //     }
+        // }
+
+        // //Logic: giả sử cho một mảng số, cần sắp xếp tăng dần hoặc giảm dần
+        // //Viết một đoạn code để đổi chỗ phần tử thứ i và thứ j (chưa xác định chính xác điều kiện cần để đổi chỗ 2 phần tử. Ví dụ ở đoạn code trên, điều kiện cần là arr[i] < arr[j], còn đoạn code dưới chỉ đơn giản là thực hiện đổi chỗ 2 phần tử (callbackFnc(arr[i], arr[j])))
+        // //Sau này, khi gọi lại hàm sortArrayNumber, đẩy parameter vào là n1, n2 và điều kiện (sử dụng arrow function để đẩy luôn điều kiện vào (ở đây là n1 > n2 hoặc n1 < n2)). Nếu điều kiện đúng thì thực thi lệnh trong callback function
+        // var sortArrayNumber = function(arr, callbackFnc) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = i + 1; j < arr.length; j++) {
+        //             if (callbackFnc(arr[i], arr[j])) {
+        //                 let temp = arr[i];
+        //                 arr[i] = arr[j];
+        //                 arr[j] = temp;
+        //             }
+        //         }
+        //     }
+        // }
+
+        // var newNumbers = [1,4,8,2,4,7,4,2,6,78,33,0];
+        // sortArrayNumber(newNumbers, (n1, n2) => n1 > n2); //Sắp xếp tăng dần, nếu n1 > n2 -> đổi chỗ n1 và n2
+        // console.log(newNumbers);
+        // sortArrayNumber(newNumbers, (n1, n2) => n1 < n2); //Sắp xếp giảm dần, nếu n1 < n2 -> đổi chỗ n1 và n2
+        // console.log(newNumbers);
+
+
+        // //Định nghĩa hàm tìm kiếm trong mảng bất kỳ theo điều kiện bất kỳ.
+        // let soChan = [];
+        // let soLe = [];
+        // var searchNumber = function(arr, callbackFnc) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         // if (callbackFnc(arr[i]) % 2 == 0) {
+        //         if (callbackFnc(arr[i])) {
+        //             soChan.push(arr[i]);
+        //         } else {
+        //             soLe.push(arr[i]);
+        //         }
+        //     }
+        // }
+
+        // var daySo = [2,3,4,5,6,7,8,9,10];
+        // // searchNumber(daySo, check => check % 2 == 0); //Dùng arrow function khai báo vào gán điều kiện cho biến "check"
+        // searchNumber(daySo,
+        //     function(check) {return check % 2 == 0}
+        //     //Dùng function khai báo biến "check" cục bộ
+        //     //Function để kiểm tra giá trị check truyền vào có đúng với điều kiện hay không
+        // );
+        
+        // console.log("Các số chẵn là: " + soChan);
+        // console.log("Các số lẻ là: " + soLe);
+
+
+                // // //Thầy chữa:
+                // // var searchArray = function(arr) {
+                // var searchArray = function(arr, callbackFunc) {
+                //     let result = [];
+                //     for (let item of arr) {
+                //         // if (item > 5) {
+                //         if (callbackFunc(item)) {
+                //             result.push(item);
+                //         }
+                //     }
+                //     return result;
+                // }
+                // var names = ["Đức", "Hương", "Thắng"];
+                // var searchByName = searchArray(names, (item) => {
+                //     return item == "Tâm";
+                // })
+                // console.log(searchByName);
+                // console.log(searchArray(names, n => n.indexOf("ng") >= 0));
+                // console.log(searchArray(names, function(item) {
+                //     return item.length > 3;
+                // }
+                // ));
+
+                // var changeArray = function(arr, callbackFunc) {
+                //     for (let i in arr) {
+                //         arr[i] = callbackFunc(arr[i]);
+                //     }
+                // }
+                // changeArray(names, name => name + "AAA");
+                // console.log(names);
+
+        
+
+        //Làm bài tập không cần dùng callbackFunc
+        // //Viết function trả ra giá trị lớn nhất trong một mảng số
+        //     function max(arr) {
+        //     let max = arr[0];
+        //     for (let i = 1; i < arr.length; i++) {
+        //         if (arr[i] > max) {
+        //         max = arr[i];
+        //         }
+        //     }
+        //     return max;
+        //     }
+
+        //     let arr = [1, 2, 3, 4, 5];
+        //     console.log(max(arr));
+
+        //Viết function kiểm tra số chẵn-lẻ, nguyên tố, hoàn hảo
+            // //Hàm kiểm tra số chẵn-lẻ:
+            // function chanLe(num) {
+            // return num % 2 === 0;
+            // }
+            // console.log(chanLe(4));
+            // console.log(chanLe(3));
+
+
+
+            // //Hàm kiểm tra số nguyên tố:
+            // function nguyenTo(num) {
+            // if (num < 2) return false;
+            // for (let i = 2; i <= num; i++) {
+            //     if (num % i == 0) return false;
+            // }
+            // return true;
+            // }
+            // console.log(nguyenTo(7));
+            // console.log(nguyenTo(8));
+
+
+
+            //Hàm kiểm tra số hoàn hảo:
+            //Số hoàn hảo (perfect number) là một số tự nhiên mà tổng các ước số của nó (trừ chính nó) bằng chính nó. Ví dụ, số 6 là một số hoàn hảo bởi vì các ước số của 6 là 1, 2 và 3, và tổng của chúng là 1 + 2 + 3 = 6. Một số khác là 28, vì 1 + 2 + 4 + 7 + 14 = 28.
+            // function soHoanHao(num) {
+            // let sum = 0;
+            // for (let i = 1; i <= num / 2; i++) {
+            //     if (num % i == 0) sum += i;
+            // }
+            // return sum === num;
+            // }
+            // console.log(soHoanHao(6));
+            // console.log(soHoanHao(7));
+
+            //Kiểm tra số hoàn hảo (thầy chữa):
+            function soHoanHao01(number) {
+                let total = 0;
+                for (let i = 1; i < number; i++) {
+                    if (number % i == 0)
+                        total += i;
+                }
+                if (total == number)
+                    console.log(number + " là số hoàn hảo");
+                else
+                    console.log(number + " không phải là số hoàn hảo");
+            }
+            soHoanHao01(8);
+
+
+        //Viết function trả ra trung bình cộng của một mảng số
+            // //Để trả ra trung bình cộng của một mảng số, có thể sử dụng hàm reduce() để tính tổng các phần tử trong mảng, sau đó chia cho độ dài của mảng.
+            // function average(array2) {
+            // if (array2.length === 0) return 0;
+            // const sum = array2.reduce((a, b) => a + b);
+            // return sum / array2.length;
+            // }
+
+            // // Sử dụng
+            // let array2 = [1, 2, 3, 4, 5];
+            // console.log(average(array2));
+
+
+            function tinhTBMang(arr) {
+                let tong = 0;
+                for (let item of arr) {
+                    tong += item;
+                }
+                return tong / arr.length;
+            }
+            console.log(tinhTBMang([1,2,3,4,5,6]));
+
+    </script>
+</body>
+</html>

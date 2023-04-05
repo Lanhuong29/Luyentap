@@ -1,0 +1,13 @@
+
+git init => Để tạo resp ảo
+git remote add origin <ten_respon>
+git remote add origin <Đường dẫn respon>
+
+git add .
+=> lấy toàn bộ file mình thay đổi để đẩy lên
+git status  => để kiểm tra trạng thái
+git commit -m "<noi-dung>"
+
+git push
+git push origin <ten-nhanh>
+git push --set-upstream origin master

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Tìm số lớn thứ 2
+        // let arr = [3,4,1,5,7];
+
+        //Logic:
+        //0. Tạo mảng rỗng, nhập mảng, in mảng
+        //1. Sắp xếp lại mảng
+        //2. Lấy chỉ số phần tử thứ 2 hoặc length-2 trong mảng
+        //Ví dụ: Sắp xếp theo chiều giảm dần được [7,5,4,3,1]
+        //Kết quả chính là phần tử thứ 2 hoặc length-2 trong mảng
+
+
+        //Bài tập [PT] Mini Project 04
+        //Bài 1:
+            // let myColor = ["Red", "Green", "White", "Black"];
+            // // Cách 1:
+            // let chuoi1 = ["Red" + ", " + "Green" + ", " + "White" + ", " + "Black"];
+            // let chuoi2 = ["Red" + " + " + "Green" + " + " + "White" + " + " + "Black"];
+            // console.log(chuoi1);
+            // console.log(chuoi2);
+            
+            // //Cách 2:
+            // let chuoi1 = myColor.join(", ");
+            // let chuoi2 = myColor.join(" + ");
+            // console.log(chuoi1);
+            // console.log(chuoi2);
+
+            // //Cách 3:
+            // let result = "";
+            // for (let i = 0; i < input.length; i++) {
+            //      result += myColor[i];
+            //      if (i !== myColor.length -1) {
+            //          result += ", ";    
+            //    }
+            // }
+            // console.log(result);
+        //Bài 2:
+            //Trong bài toán này, nếu phần tử đầu tiên của mảng là số chẵn thì không cần phải ghép số đó với số trước nó nữa. Vì vậy cần kiểm tra xem phần tử hiện tại có phải là phần tử đầu tiên của mảng không bằng cách dùng điều kiện (i > 0). Nếu phần tử hiện tại không phải là phần tử đầu tiên thì kiểm tra xem cặp số liền kề có cùng chẵn hay không.
+
+            // let input = prompt("Nhập dãy số của bạn:");
+            // let output = "";
+
+            // for (let i = 0; i < input.length; i++) {
+            //     if (i == 0 && input[i] % 2 == 0) {
+            //         output += input[i];
+            //     } else if (i > 0 && input[i - 1] % 2 == 0 && input[i] % 2 == 0) {
+            //         output += "-" + input[i];
+            //     } else {
+            //         output += input[i];
+            //     }
+            // }
+            // console.log(output);
+
+
+            // let str = "025468";
+            // let result = [str[0]];
+            // for (let i = 1; i < str.length; i++) {
+            // //Kiểm tra nếu ký tự trước đó và ký tự hiện tại là số chẵn thì thêm dấu "-"   
+            //      result.push("-", str[i]);
+            //      } else {
+            //          result.push(str[i]);
+            //      }
+            // }
+        //Bài 3:
+            // let input = 'The Quick Brown Fox';
+            // let output = '';
+
+            // for (let i = 0; i < input.length; i++) {
+            //     let char = input.charAt(i); //charAt() để lấy ký tự tại vị trí hiện tại trong chuỗi
+
+            //     if (char == char.toUpperCase()) {
+            //         output += char.toLowerCase();
+            //     } else {
+            //         output += char.toUpperCase();
+            //     }
+            // }
+
+            // console.log(output);
+
+            // //Cách 2:
+            // let str = "The Quick Brown Fox";
+            // let result = "";
+            // for (let i = 0; i < str.length; i++) {
+            //     let addText = str[i];
+            //     if (addText === addText.toUpperCase()) {
+            //         result += addText.toLocaleUpperCase();
+            //     } else {
+            //         result += addText.toUpperCase();
+            //     }
+            // }
+
+            // console.log(result);
+
+            
+            // //Bài 4:
+            // let input = prompt("Nhập dãy số, các số cách nhau bởi dấu phẩy:");
+            // let numbers = input.split(",");
+            // let sum = 0;
+            // for (let i = 0; i < numbers.length; i++) {
+            //     sum += Number(numbers[i]);
+            // }
+
+            // console.log("Tổng các số là: " + sum);
+
+
+            //Bài 5:
+            //Số nhỏ nhất
+            // let inputUser = prompt("Nhập dãy số, cách nhau bằng dấu , ");
+            // let nums = inputUser.split(",");
+            // let min = Number(nums[0]);
+            // for (let i = 0; i < nums.length; i++) {
+            //     let currentNum = Number(nums[i]);
+            //     if (currentNum < min) {
+            //         min = currentNum;
+            //     }
+            // }
+            // console.log(`Số nhỏ nhất là ${min}`);
+            
+            
+            // //Số nhỏ thứ 2
+            // //Logic:
+            // //0. Tạo mảng rỗng, nhập mảng, in mảng
+            // //1. Sắp xếp lại mảng
+            // //2. Lấy chỉ số phần tử thứ 2 hoặc length-2 trong mảng
+            // //Ví dụ: Sắp xếp theo chiều giảm dần được [7,5,4,3,1]
+            // //Kết quả chính là phần tử thứ 2 hoặc length-2 trong mảng
+            // let inputUser = prompt("Nhập dãy số, cách nhau bằng dấu , ");
+            // let nums = inputUser.split(",");
+            // let min1 = Number(nums[0]);
+            // let min2 = Number(nums[1]);
+            // for (let i = 0; i < nums.length; i++) {
+            //     let currentNum = Number(nums[i]);
+            //     if (currentNum < min1) {
+            //         min2 = min1;
+            //         min1 = currentNum;
+            //     } else if (currentNum > min1 && currentNum <= min2) {
+            //         min2 = currentNum;
+            //     }
+
+            // }
+            // console.log(`Số nhỏ nhất là ${min2}`);
+    </script>
+</body>
+</html>
