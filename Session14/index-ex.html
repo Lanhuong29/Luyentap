@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="password" id="pass">
+    <button id="btnShowPass">Hiện</button>
+    <script>
+        //Tìm phần tử muốn tương tác
+        var ip = document.getElementById('pass');
+        var btn = document.getElementById('btnShowPass');
+        //Xử lý sự kiện click
+        btn.onclick = () => {
+            // alert('Click');
+            // ip.setAttribute('type', 'text');
+            // btn.innerText = "Ẩn";
+            let ipType = ip.getAttribute('type'); //Lấy về thuộc tính type của ip
+            if (ipType === 'password') { //Hiện
+                ip.setAttribute('type', 'text');
+                btn.innerText = "Ẩn";
+            } else { //Ẩn
+                ip.setAttribute('type', 'password');
+                btn.innerText = "Hiện";
+            }
+        }
+    </script> -->
+
+    <!-- Bài tập:
+    Viết JS xử lý sau khi nhập tên sinh viên vào input#fullName (không được bỏ trống) và bấm nút button#btnAdd, thực hiện thêm mới 1 phần tử <li> vào ul#list với nội dung là tên sinh viên vừa nhập ở input -->
+
+    <input type="text" id="fullName" placeholder="Nhập tên sinh viên">
+    <button type="button" id="btnAdd">Thêm</button>
+    <ul id="list">
+    </ul>
+
+    <script>
+    //Hương làm:
+        //Tìm phần tử muốn tương tác
+        var fullNameInput = document.getElementById("fullName");
+        var btnAdd = document.getElementById("btnAdd");
+        var list = document.getElementById("list");
+
+        //Xử lý sự kiện click
+        btnAdd.onclick = () => {
+        // Lấy giá trị từ input
+        var fullName = fullNameInput.value;
+        // Kiểm tra giá trị không rỗng
+        if (fullName !== "") {
+            // Tạo phần tử li mới
+            var newListItem = document.createElement("li");
+
+            // Thêm nội dung vào phần tử li
+            var textNode = document.createTextNode(fullName);
+            newListItem.appendChild(textNode);
+
+            // Thêm phần tử li vào danh sách ul
+            list.appendChild(newListItem);
+
+            // Xóa giá trị trong input
+            fullNameInput.value = "";
+        } else {
+            alert ("Không được để trống tên!");
+        }
+        };
+
+
+    //Thầy chữa:
+    var btn = document.getElementById('btnAdd');
+    var fName = document.getElementById('fullName');
+    var list = document.getElementById('list');
+
+    btn.onclick = function() {
+        let txtName = fName.value.trim();
+        if (txtName != '') {
+            let li = document.createElement('li');
+            li.innerText = txtName;
+            list.appendChild(li);
+        } else {
+            alert("Không được để trống");
+        }
+    }
+
+
+    // BÀI 2
+        // Viết javascript sao cho sau khi nhập giá trị ở các ô input (borderWidth, borderStyle, borderColor) sẽ thay đổi thuộc tính css tương ứng ở div#wrap
+    </script>
+
+
+    <h1>Bài 2</h1>
+    <div id="wrap" style="width: 350px; height: 350px;border: 1px solid red"></div>
+    <p><input id="borderWidth" type="text" placeholder="Độ rộng đường viền"></p>
+    <p><input id="borderStyle" type="text" placeholder="Kiểu đường viền"></p>
+    <p><input id="borderColor" type="text" placeholder="Màu đường viền"></p>
+</body>
+</html>

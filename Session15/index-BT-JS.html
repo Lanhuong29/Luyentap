@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="baitap1"></div>
+    <script>
+      // Lấy phần tử div có id=baitap1
+      let container = document.getElementById("baitap1");
+  
+      // Tạo phần tử p và input
+      let p = document.createElement("p");
+      let input = document.createElement("input");
+      input.type = "text";
+      input.id = "noiDung";
+      p.textContent = "Nhập nội dung tìm kiếm";
+      p.appendChild(input);
+
+      // Tạo phần tử a
+      let a = document.createElement("a");
+        a.href = "#";
+        a.textContent = "Tìm kiếm nâng cao";
+        p.appendChild(document.createTextNode(" "));
+        p.appendChild(input);
+        p.appendChild(document.createTextNode(" "));
+        p.appendChild(a);
+
+      a.onclick = () => {
+        a.style.display = "none";
+        aReplace.style.display = "inline-block";
+        // a.innerText = "Ấn tìm kiếm nâng cao";
+        select.style.display = "block";
+      };
+
+      //Tạo một biến a thay thế
+      let aReplace = document.createElement("aReplace");
+      aReplace.innerText = "Ấn tìm kiếm nâng cao";
+      aReplace.style.display = "none";
+      aReplace.href = "#";
+  
+      // Tạo phần tử select và các option
+      let select = document.createElement("select");
+      select.style.display = "none";
+      let option1 = document.createElement("option");
+      let option2 = document.createElement("option");
+      let option3 = document.createElement("option");
+      option1.value = "Quần áo";
+      option1.textContent = "Quần áo";
+      option2.value = "Giày dép";
+      option2.textContent = "Giày dép";
+      option3.value = "Sách vở";
+      option3.textContent = "Sách vở";
+      select.appendChild(option1);
+      select.appendChild(option2);
+      select.appendChild(option3);
+       
+      // Tạo phần tử p chứa select
+      let p2 = document.createElement("p");
+      p2.appendChild(select);
+  
+      // Tạo phần tử button
+      let button = document.createElement("button");
+      button.type = "button";
+      button.id = "btnAdd";
+      button.textContent = "Tìm kiếm";
+  
+      // Thêm các phần tử vào phần tử div
+      container.appendChild(p);
+      container.appendChild(p2);
+      container.appendChild(button);
+    </script>
+  </body>  
+</html>

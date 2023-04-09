@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="txt">JavaScript</h1>
+    <h1 class="txt">GetByTagName</h1>
+    <div id="list" style="border: 2px solid gray">
+        <input type="text" id="replace">
+    </div>
+    <input type="password" id="pass">
+    <script>
+        // //getElementById: trả về đối tượng
+        // //getElements...: trả về mảng (có nhiều đối tượng)
+        // var h1 = document.getElementById("title");
+        // var byTagName = document.getElementByTagName('h1');
+        // var byClassName = document.getElementByClassName('txt');
+
+        // //Tìm phần tử đầu tiên trong element (ở đây là document) và trả về phần tử HTML
+        // var querySelector = document.querySelector('#title'); //Chỉ lấy về id hoặc class (như dòng .txt dưới đây)
+        // var querySelector = document.querySelector('.txt');
+        // var querySelectorAll = document.querySelectorAll('#title');
+        // h1.innerText = "Java Script DOM";
+        // console.log(h1);
+        // console.log(h1.id);
+        // //Khi muốn truy cập một thuộc tính của đối tượng thì thêm .vào trước id (<biến>.id)
+        // console.log(byTagName);
+        // console.log(byClassName);
+        // console.log(querySelector);
+
+        
+
+        //Thay đổi thuộc tính, truy xuất thông tin
+        var _list = document.getElementById('list');
+        _list.innerHTML = `
+            <ul>
+                <li>Danh sách 1</li>
+                <li>Danh sách 2</li>
+                <li>Danh sách 3</li>
+            </ul>
+        `;
+        _list.style.borderColor = 'red';
+        _list.style.borderWidth = '10px';
+        console.log(_list.style.borderStyle);
+        console.log(_list.style.borderColor);
+        
+        //Thay đổi thuộc tính
+        var pass = document.getElementById('pass');
+        pass.setAttribute('type','text');
+
+        //Thêm, xóa phần tử HTML
+        var btn = document.createElement('button');
+        btn.id = "btn";
+        btn.value = "Click me";
+        _list.appendChild(btn);
+        _list.replaceChild(document.createElement('input'), btn)
+
+    </script>
+</body>
+</html>
