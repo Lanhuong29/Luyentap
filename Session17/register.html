@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="register-form">
+        <p><b>Tên đăng nhập: </b><input type="text" id="username"></p>
+        
+        <p><b>Email:</b><input type="email" id="email"></p>
+        
+        <p for="password">Mật khẩu:</p>
+        <input type="password" id="password">
+        
+        <p for="password">Xác nhận mật khẩu:</p>
+        <input type="password" id="confirm-password">
+      
+        <button type="submit" id="register">Đăng ký</button>
+      </form>
+
+    <script>
+        // Khởi tạo một mảng để lưu thông tin đăng ký
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        let form = document.getElementById('register-form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let username = document.getElementById('username').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('confirm-password').value;
+
+            let usernameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let passwordRegex = /^.{8,}$/;
+
+            if (!username.match(usernameRegex)) {
+                alert('Invalid username');
+                return;
+            }
+
+            if (!email.match(emailRegex)) {
+                alert('Invalid email');
+                return;
+            }
+
+            if (!password.match(passwordRegex)) {
+                alert('Password must be at least 8 characters');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email === email) {
+                alert('Email already exists');
+                return;
+                }
+            }
+
+            let user = {
+                username: username,
+                email: email,
+                password: password
+            };
+
+            // Thêm thông tin người dùng vào mảng users
+            users.push(user);
+
+            // Cập nhật lại danh sách người dùng trong localStorage
+            localStorage.setItem("users", JSON.stringify(users));
+
+
+            alert('Registration successful');
+
+            window.location.href = 'login.html';
+        });
+
+    </script>
+</body>
+</html>

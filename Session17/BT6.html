@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 6. Xây dựng đối tượng book gồm các thuộc tính và phương thức sau:
+            // a. bookId: mã sách
+            // b. bookName: tên sách
+            // c. price: giá sách
+            // d. author: Các tác giả sách
+            // e. bookStatus: trạng thái sách
+            // f. inputData: cho phép nhập thông tin sách
+            // g. displayData: cho phép hiển thị các thông tin sách
+        
+        
+        // let book = {
+        //         bookId: '',
+        //         bookName: '',
+        //         price: 0,
+        //         authors: [],
+        //         bookStatus: '',
+        // }
+        // function input(id, name, price, authors, status) {
+        //     this.bookId = id;
+        //     this.bookName = name;
+        //     this.price = price;
+        //     this.authors = authors;
+        //     this.bookStatus = status;
+        //     this.output = function() {
+        //         console.log(`Book ID: ${this.bookId}`);
+        //         console.log(`Book Name: ${this.bookName}`);
+        //         console.log(`Price: ${this.price}`);
+        //         console.log(`Authors: ${this.authors}`);
+        //         console.log(`Status: ${this.bookStatus}`);
+        // }
+        // }
+
+        // let book1 = new input('111', 'Tên sách đây', 'Giá sách đây', 'Tác giả nè', 'Chưa bán đâu');
+
+        // let book2 = new input('222', 'Tên sách 2', 'Giá sách 2', 'Tác giả 2', 'Bán rồi nha');
+
+        // book1.output();
+        // book2.output();
+        
+                //////////CODE SAI
+                // let book = {
+                //     bookId: '',
+                //     bookName: '',
+                //     price: 0,
+                //     authors: [],
+                //     bookStatus: '',
+                // inputData: function() {
+                //     this.bookId = prompt("Nhập book ID:");
+                //     this.bookName = prompt("Nhập book name:");
+                //     this.price = parseFloat(prompt("Nhập book price:"));
+                //     let authorString = prompt("Nhập book authors (comma-separated):");
+                //     this.authors = authorString.split(",");
+                //     this.bookStatus = prompt("Nhập book status:");
+                // },
+                // displayData: function() {
+                //     console.log(`Book ID: ${this.bookId}`);
+                //     console.log(`Book Name: ${this.bookName}`);
+                //     console.log(`Price: ${this.price}`);
+                //     console.log(`Authors: ${this.authors.join(", ")}`);
+                //     console.log(`Status: ${this.bookStatus}`);
+                // }
+                // };
+
+                
+                // let book1 = Object.create(book);
+                // let book2 = Object.create(book);
+
+                // book1 = inputData();
+                // book2 = inputData();
+
+                // book1.displayData();
+                // book2.displayData();
+
+
+
+
+        ///////////Thầy chữa
+
+        //Định nghĩa class, thuộc tính và phương thức
+        //Khai báo chuỗi rỗng cho các đối số để các đối số không bị nhận giá trị undefined
+        class Book {
+            constructor(bookId='', bookName='', price=0.0, author='', bookStatus=true) {
+                this.bookId = bookId;
+                this.bookName = bookName;
+                this.price = price;
+                this.author = author;
+                this.bookStatus = bookStatus;
+            }
+            inputData() {
+                this.bookId = prompt('Nhập mã sách');
+                this.bookName = prompt('Nhập tên sách');
+                this.price = prompt('Nhập giá sách');
+                this.author = prompt('Nhập tác giả sách');
+                this.bookStatus = prompt('Nhập trạng thái sách');
+            }
+            displayData() {
+                console.log(`
+                   Mã sách: ${this.bookId} 
+                   Tên sách: ${this.bookName} 
+                   Giá sách: ${price} 
+                   Tác giả: ${this.author} 
+                   Trạng thái: ${this.bookStatus} 
+                `);
+            }
+        }
+
+        //Khởi tạo giá trị
+        var book = new Book();
+        book.inputData();
+        book.displayData();
+
+        //Thứ tự thực thi chương trình:
+        //1. Định nghĩa class, thuộc tính và phương thức (Tạo ra khuôn)
+        //2. Khai báo và khởi tạo giá trị mới (book)
+        //3. Gọi phương thức inputData (trong dòng book.inputData)
+            //Phương thức inputData được thực thi
+        //4. Gọi phương thức displayData
+
+    </script>
+</body>
+</html>
