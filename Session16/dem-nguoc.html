@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Khai báo mốc thời gian
+        let target = new Date('2023/04/11');
+        //Lấy thời gian hiện tại
+        let now = new Date();
+        //Tính khoảng cách giữa 2 mốc thời gian bao nhiêu giây
+        let seconds = (target.getTime() - now.getTime())/1000;
+        //Tính giờ
+        let h = parseInt(seconds/3600);
+        //Tính phút
+        let m = parseInt((seconds % 3600)/60);
+        //Tính giây
+        let sec = parseInt(seconds % 60);
+
+        console.log(h + ":" + m + ":" + sec);
+
+        let img = document.createElement('img');
+        img.src = 'imgs/con-ga.png';
+        img.alr = 'Đây là con gà';
+        img.addEventListener('click', function () {
+            alert("Bắt được con gà");
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cách tạo ra chuỗi quy tắc</title>
+</head>
+<body>
+    <script>
+        //Khai báo chuỗi quy tắc
+        let _regex = /[A-Z]/; //Chuỗi quy tắc: Giới hạn phạm vi in hoa
+
+        //Sử dụng
+        console.log(_regex.test('132aA1231')); //Hàm để KIỂM TRA (trả true hoặc false ra) về giá trị TRONG chuỗi đầu vào có ÍT NHẤT 01 GIÁ TRỊ phù hợp với các quy tắc hay không => True/False
+        console.log(_regex.exec('123412aA123141')); //LẤY RA các giá trị phù hợp với quy tắc được đưa ra trong _regex => Object
+
+        
+
+    </script>
+</body>
+</html>
