@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr.active td {
+            background-color: skyblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>SV01</td>
+            <td>Nam</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>SV02</td>
+            <td>Nam</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>SV03</td>
+            <td>Nam</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <script src="JS/jquery-3.6.4.min.js"></script>
+    <script>
+        $('td').click( function() {
+            $(this).parent('tr'); //Tìm ra cha của td
+            $(this).parents('table'); //Tìm ra các cấp lớn hơn cha của td
+            $(this).find('table'); //Cũng là tìm
+            $(this).parent().addClass('active'); //Áp dụng style active (thêm class active vào td để chuyển màu)
+            $(this).parent().siblings().removeClass('active'); //siblings là lấy những đối tượng cùng cấp với td đang được chọn; removeClass để loại bỏ class active ở các đối tượng cùng cấp đang được lấy trước đó
+
+        })
+    </script>
+</body>
+</html>

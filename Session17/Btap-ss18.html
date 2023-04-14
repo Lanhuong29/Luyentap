@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Danh sách tài khoản</h2>
+    <div class="frm">
+        <input type="hidden" name="" id="id-username">
+        <input type="text" name="" id="username" placeholder="Thêm tài khoản mới">
+        <select name="" id="status">
+            <option value="1">Đang hoạt động</option>
+            <option value="0">Tạm dừng</option>
+        </select>
+        <input type="email" name="" id="email" class="email" placeholder="Email">
+        <input type="password" name="" id="password" class="password" placeholder="Mật khẩu">
+        <button class="btnSave">Save</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Tài khoản</th>
+                <th>Trạng thái hoạt động</th>
+                <th>Email</th>
+                <th>Mật khẩu</th>
+                <th>Lựa chọn</th>
+            </tr>
+        </thead>
+        <tbody class="list">
+            
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app-ss18.js"></script>
+</body>
+</html>

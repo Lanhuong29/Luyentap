@@ -2,5 +2,5 @@
 Bước 1: Query ELement (Lấy ra phần tử)
 Bước 2: Kiểm tra Element đó có tồn tại hay không? nếu có đi tiếp nếu không mình sẽ không làm gì cả 
 Bước 3: Thao tác với element (add, remove, v.v.v)
-Bước 4: attach/ detach event thông qua thằng addeventListener 
+Bước 4: attack/ detack event thông qua addeventListener 
 note: 3 + 4 có thể thực hiện cùng nhau

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>To Do App</h2>
+    <div class="frm">
+        <input type="hidden" name="" class="taskId">
+        <input type="text" name="" id="" class="taskName" placeholder="Enter a task here">
+        <button class="btnSave">Save</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Todo item</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="list">
+            <tr>
+                <td>1</td>
+                <td>Code</td>
+                <td>
+                    <select class="taskStatus" name="" id="">
+                        <option value="false">In Progress</option>
+                        <option value="true">Done</option>
+                    </select>
+                </td>
+                <td>
+                    <button class="btnEdit">Edit</button>
+                    <button class="btnDel">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
