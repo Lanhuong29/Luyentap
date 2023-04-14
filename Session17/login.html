@@ -28,7 +28,7 @@
         let password = document.getElementById('password');
 
         login.onclick = () => {
-            let users = JSON.parse(localStorage.getItem("users"));
+            let users = JSON.parse(localStorage.getItem("users")) || [];
             let currentUser = users.find(user => user.username === username.value && user.password === password.value);
             if (currentUser) {
                 sessionStorage.setItem('username', currentUser.username);
