@@ -38,9 +38,9 @@
     <script src="JS/jquery-3.6.4.min.js"></script>
     <script>
         $('td').click( function() {
-            $(this).parent('tr'); //Tìm ra cha của td
+            $(this).parent('tr'); //Tìm ra cha của td (tìm phần tử bên ngoài)
             $(this).parents('table'); //Tìm ra các cấp lớn hơn cha của td
-            $(this).find('table'); //Cũng là tìm
+            $(this).find('table'); //Cũng là tìm các phần tử bên trong (tìm con)
             $(this).parent().addClass('active'); //Áp dụng style active (thêm class active vào td để chuyển màu)
             $(this).parent().siblings().removeClass('active'); //siblings là lấy những đối tượng cùng cấp với td đang được chọn; removeClass để loại bỏ class active ở các đối tượng cùng cấp đang được lấy trước đó
 
