@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourest - Explore the World</title>
+
+  <!--
+    - fonticon link
+  -->
+  <link rel="stylesheet" href="assets/css/icofont.min.css">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - bootstrap link
+  -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- Owl carousel -->
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#">
+        <h1 class="logo">Tourest</h1>
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#" class="navbar-link">Trang chủ</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Về chúng tôi</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Vé đặt trước</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Địa điểm</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Liên hệ</a>
+          </li>
+
+        </ul>
+
+        <button class="header-action-btn" aria-label="Open shopping cart" data-panel-btn="cart">
+          <ion-icon name="basket-outline"></ion-icon>
+
+          <data class="btn-badge total-carts-item" value="2">02</data>
+        </button>
+
+        <!-- <a href="#" class="btn btn-secondary">Booking Now</a> -->
+
+      </nav>
+
+    </div>
+
+    <!-- 
+    - #ASIDE
+  -->
+
+    <aside class="aside">
+      <div class="side-panel" data-side-panel="cart">
+
+        <button class="panel-close-btn" aria-label="Close cart" data-panel-btn="cart">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <ul class="panel-list">
+
+          <li class="panel-item">
+            <a href="product-details.html" class="panel-card">
+
+              <figure class="item-banner">
+                <img src="assets/images/product-small-2.jpg" width="46" height="46" loading="lazy" alt="Eco Vegetable">
+              </figure>
+
+              <div>
+                <p class="item-title"></p>
+
+                <span class="item-value"></span>
+              </div>
+
+              <button class="item-close-btn" aria-label="Remove item">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="subtotal">
+          <p class="subtotal-text">Tổng:</p>
+
+          <data class="subtotal-value" value="">0</data>
+        </div>
+
+        <a href="" class="panel-btn">Thanh toán</a>
+
+      </div>
+
+    </aside>
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero"
+        style="background-image: url('./assets/images/hero-bg-bottom.png') url('./assets/images/hero-bg-top.png')">
+        <div class="container">
+
+          <img src="./assets/images/shape-1.png" width="61" height="61" alt="Vector Shape" class="shape shape-1">
+
+          <img src="./assets/images/shape-2.png" width="56" height="74" alt="Vector Shape" class="shape shape-2">
+
+          <img src="./assets/images/shape-3.png" width="57" height="72" alt="Vector Shape" class="shape shape-3">
+
+          <div class="hero-content">
+
+            <p class="section-subtitle">Du lịch - Đi lại</p>
+
+            <h2 class="hero-title">Đặt mua vé trải nghiệm trên Tourest</h2>
+
+            <p class="hero-text">
+              Dịch vụ Trải nghiệm trên Tourest không chỉ mang đến cho chúng ta niềm vui, tiếng cười, những giây phút thư giãn, giải trí cùng các ưu điểm vượt trội.
+            </p>
+
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Liên hệ</a>
+
+              <a href="#" class="btn btn-outline">Xem thêm</a>
+            </div>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" width="686" height="812" loading="lazy" alt="hero banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #PRODUCT
+      -->
+
+      <section class="section product custom">
+        <div class="container">
+
+          <p class="section-subtitle"> -- Sản phẩm chính --</p>
+
+          <h2 class="h2 section-title">Tất cả sản phẩm</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="product-card">
+
+                <figure class="card-banner">
+                  <img src="assets/images/product-1.png" width="189" height="189" loading="lazy" alt="Fresh Orangey">
+
+                  <div class="btn-wrapper">
+                    <button class="product-btn" aria-label="Add to Whishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <div class="tooltip">Yêu thích</div>
+                    </button>
+
+                    <button class="product-btn" aria-label="Quick View">
+                      <ion-icon name="eye-outline"></ion-icon>
+
+                      <div class="tooltip">Xem nhanh</div>
+                    </button>
+                  </div>
+                </figure>
+
+                <div class="rating-wrapper">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+                <h3 class="h4 card-title">
+                  <a href="product-details.html">Fresh Orangey</a>
+                </h3>
+
+                <div class="price-wrapper">
+                  <!-- <del class="del"></del> -->
+
+                  <data class="price" value="">100000 VNĐ</data>
+                </div>
+
+                <button class="btn btn-primary">Chọn vé</button>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <!-- 
+        - #DESTINATION
+      -->
+
+      <section class="section destination">
+        <div class="container">
+
+          <p class="section-subtitle">Điểm đến</p>
+
+          <h2 class="h2 section-title">Chọn điểm đến của bạn</h2>
+
+          <ul class="destination-list">
+
+            <li class="w-50">
+              <a href="#" class="destination-card">
+
+                <figure class="card-banner banner-max">
+                  <img src="assets/images/Lang-Bac.jpg" width="1140" height="1100" loading="lazy"
+                    alt="" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Ba Đình</p>
+
+                  <h3 class="h3 card-title">Quảng trường Ba Đình – Lăng Bác</h3>
+                </div>
+
+              </a>
+            </li>
+
+            <li class="w-50">
+              <a href="#" class="destination-card">
+
+                <figure class="card-banner banner-max">
+                  <img src="assets/images/Ho-Guom.jpg" width="1140" height="1100" loading="lazy"
+                    alt="" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Hoàn Kiếm</p>
+
+                  <h3 class="h3 card-title">Hồ Gươm</h3>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="destination-card">
+
+                <figure class="card-banner banner-min">
+                  <img src="assets/images/Van-mieu.jpg" width="1110" height="480" loading="lazy"
+                    alt="" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Đống Đa</p>
+
+                  <h3 class="h3 card-title">Văn Miếu</h3>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="destination-card">
+
+                <figure class="card-banner banner-min">
+                  <img src="assets/images/Nha-tho.jpg" width="1110" height="480" loading="lazy"
+                    alt="" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Hoàn Kiếm</p>
+
+                  <h3 class="h3 card-title">Nhà thờ lớn</h3>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="destination-card">
+
+                <figure class="card-banner banner-min">
+                  <img src="assets/images/Chua-Tran-Quoc.jpg" width="1110" height="480" loading="lazy"
+                    alt="" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Tây Hồ</p>
+
+                  <h3 class="h3 card-title">Chùa Trấn Quốc</h3>
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #POPULAR
+      -->
+
+      <section class="section popular">
+        <div class="container">
+
+          <p class="section-subtitle">Dịch vụ nổi bật</p>
+
+          <h2 class="h2 section-title">Dịch vụ hot nhất</h2>
+
+          <section class="recent-product">
+            <div class="container">
+              <div class="title-section">
+              </div>
+              <div class="content-section">
+                <!-- Set up your HTML -->
+                <div class="owl-carousel owl-theme owl-custom">
+
+                  <div class="item">
+                    <div class="product-item">
+                      <li>
+                        <div class="popular-card">
+
+                          <figure class="card-banner">
+                            <a href="#">
+                              <img src="assets/images/Lang-Bac.jpg" width="740" height="518" loading="lazy"
+                                alt="" class="img-cover">
+                            </a>
+
+                            <span class="card-badge">
+                              <ion-icon name="heart" aria-label="Favorite"></ion-icon>
+
+                              <time datetime="P12D">30/4 - 1/5</time>
+                            </span>
+                          </figure>
+
+                          <div class="card-content">
+
+                            <div class="card-wrapper">
+                              <div class="card-price">50.000VNĐ</div>
+
+                              <div class="card-rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-outline"></ion-icon>
+
+                                <data value="2">(15)</data>
+                              </div>
+                            </div>
+
+                            <h3 class="card-title">
+                              <a href="#">Lăng Bác – Quảng trường Ba Đình là địa điểm du lịch ở Hà Nội mà các bạn không thể bỏ qua.</a>
+                            </h3>
+
+                            <address class="card-location">Quảng trường Ba Đình – Lăng Bác</address>
+
+                          </div>
+
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="product-item">
+                      <li>
+                        <div class="popular-card">
+
+                          <figure class="card-banner">
+                            <a href="#">
+                              <img src="assets/images/Ho-Guom.jpg" width="740" height="518" loading="lazy"
+                                alt="" class="img-cover">
+                            </a>
+
+                            <span class="card-badge">
+                              <ion-icon name="heart" aria-label="Favorite"></ion-icon>
+
+                              <time datetime="P12D">5/5 - 15/5</time>
+                            </span>
+                          </figure>
+
+                          <div class="card-content">
+
+                            <div class="card-wrapper">
+                              <div class="card-price">100.000VNĐ</div>
+
+                              <div class="card-rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-outline"></ion-icon>
+
+                                <data value="2">(23)</data>
+                              </div>
+                            </div>
+
+                            <h3 class="card-title">
+                              <a href="#">Nằm ở giữa trung tâm, Hồ Gươm được ví như trái tim của thành phố ngàn năm tuổi này.</a>
+                            </h3>
+
+                            <address class="card-location">Hồ Gươm</address>
+
+                          </div>
+
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="product-item">
+                      <li>
+                        <div class="popular-card">
+
+                          <figure class="card-banner">
+                            <a href="#">
+                              <img src="assets/images/Van-mieu.jpg" width="740" height="518" loading="lazy"
+                                alt="" class="img-cover">
+                            </a>
+
+                            <span class="card-badge">
+                              <ion-icon name="heart" aria-label="Favorite"></ion-icon>
+
+                              <time datetime="P12D">30/5 - 5/6</time>
+                            </span>
+                          </figure>
+
+                          <div class="card-content">
+
+                            <div class="card-wrapper">
+                              <div class="card-price">30.000VNĐ</div>
+
+                              <div class="card-rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-outline"></ion-icon>
+
+                                <data value="2">(18)</data>
+                              </div>
+                            </div>
+
+                            <h3 class="card-title">
+                              <a href="#">Niềm tự hào của người dân Thủ đô ngàn năm văn hiến Thăng Long – Đông Đô – Hà Nội.</a>
+                            </h3>
+
+                            <address class="card-location">Văn Miếu - Quốc Tử Giám</address>
+
+                          </div>
+
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="product-item">
+                      <li>
+                        <div class="popular-card">
+
+                          <figure class="card-banner">
+                            <a href="#">
+                              <img src="assets/images/Nha-tho.jpg" width="740" height="518" loading="lazy"
+                                alt="" class="img-cover">
+                            </a>
+
+                            <span class="card-badge">
+                              <ion-icon name="heart" aria-label="Favorite"></ion-icon>
+
+                              <time datetime="P12D">1/5 - 30/6</time>
+                            </span>
+                          </figure>
+
+                          <div class="card-content">
+
+                            <div class="card-wrapper">
+                              <div class="card-price">50.000VNĐ</div>
+
+                              <div class="card-rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-outline"></ion-icon>
+
+                                <data value="2">(14)</data>
+                              </div>
+                            </div>
+
+                            <h3 class="card-title">
+                              <a href="#">Nhà thờ lớn là một địa điểm quen thuộc của giới trẻ, khách du lịch tứ phương.</a>
+                            </h3>
+
+                            <address class="card-location">Nhà thờ lớn Hà Nội</address>
+
+                          </div>
+
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about">
+        <div class="container">
+
+          <div class="about-content">
+
+            <p class="section-subtitle">Về chúng tôi</p>
+
+            <h2 class="h2 section-title">Mua vé trải nghiệm vừa nhanh vừa tiện trên Tourest</h2>
+
+            <p class="about-text">
+              Tự tin lên kế hoạch cho chuyến đi sắp tới của bạn bằng những bí kíp du lịch cực chất từ Tourest.
+            </p>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+
+                <div class="about-item-icon">
+                  <ion-icon name="compass"></ion-icon>
+                </div>
+
+                <div class="about-item-content">
+                  <h3 class="h3 about-item-title">Thủ tục dễ dàng</h3>
+
+                  <p class="about-item-text">
+                    Hành khách mua vé và lấy mã trên Tourest để được vào cửa trực tiếp mà không cần xác nhận đổi vé cứng tại quầy.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="about-item">
+
+                <div class="about-item-icon">
+                  <ion-icon name="briefcase"></ion-icon>
+                </div>
+
+                <div class="about-item-content">
+                  <h3 class="h3 about-item-title">Ngập tràn ưu đãi</h3>
+
+                  <p class="about-item-text">
+                    Đặt vé trải nghiệm trên Tourest luôn có nhiều ưu đãi giá vé độc quyền với giá cạnh tranh nhất.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="about-item">
+
+                <div class="about-item-icon">
+                  <ion-icon name="umbrella"></ion-icon>
+                </div>
+
+                <div class="about-item-content">
+                  <h3 class="h3 about-item-title">Hỗ trợ khách hàng 24/7</h3>
+
+                  <p class="about-item-text">
+                    Đội ngũ nhân viên hỗ trợ khách hàng luôn sẵn sàng giúp đỡ bạn trong từng bước của quá trình đặt vé.
+                  </p>
+                </div>
+
+              </li>
+
+            </ul>
+
+            <a href="#" class="btn btn-primary">Đặt vé</a>
+
+          </div>
+
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" width="756" height="842" loading="lazy" alt="" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <!-- <section class="section blog">
+        <div class="container">
+
+          <p class="section-subtitle">From The Blog Post</p>
+
+          <h2 class="h2 section-title">Latest News & Articles</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="./assets/images/popular-1.jpg" width="740" height="518" loading="lazy"
+                      alt="A good traveler has no fixed plans and is not intent on arriving." class="img-cover">
+                  </a>
+
+                  <span class="card-badge">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="12-04">04 Dec</time>
+                  </span>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+
+                    <div class="author-wrapper">
+                      <figure class="author-avatar">
+                        <img src="./assets/images/author-avatar.png" width="30" height="30" alt="Jony bristow">
+                      </figure>
+
+                      <div>
+                        <a href="#" class="author-name">Jony bristow</a>
+
+                        <p class="author-title">Admin</p>
+                      </div>
+                    </div>
+
+                    <time class="publish-time" datetime="10:30">10:30 AM</time>
+
+                  </div>
+
+                  <h3 class="card-title">
+                    <a href="#">
+                      A good traveler has no fixed plans and is not intent on arriving.
+                    </a>
+                  </h3>
+
+                  <a href="#" class="btn-link">
+                    <span>Read More</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="./assets/images/blog-2.jpg" width="740" height="518" loading="lazy"
+                      alt="A good traveler has no fixed plans and is not intent on arriving." class="img-cover">
+                  </a>
+
+                  <span class="card-badge">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="12-04">04 Dec</time>
+                  </span>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+
+                    <div class="author-wrapper">
+                      <figure class="author-avatar">
+                        <img src="./assets/images/author-avatar.png" width="30" height="30" alt="Jony bristow">
+                      </figure>
+
+                      <div>
+                        <a href="#" class="author-name">Jony bristow</a>
+
+                        <p class="author-title">Admin</p>
+                      </div>
+                    </div>
+
+                    <time class="publish-time" datetime="10:30">10:30 AM</time>
+
+                  </div>
+
+                  <h3 class="card-title">
+                    <a href="#">
+                      A good traveler has no fixed plans and is not intent on arriving.
+                    </a>
+                  </h3>
+
+                  <a href="#" class="btn-link">
+                    <span>Read More</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="./assets/images/blog-3.jpg" width="740" height="518" loading="lazy"
+                      alt="A good traveler has no fixed plans and is not intent on arriving." class="img-cover">
+                  </a>
+
+                  <span class="card-badge">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="12-04">04 Dec</time>
+                  </span>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+
+                    <div class="author-wrapper">
+                      <figure class="author-avatar">
+                        <img src="./assets/images/author-avatar.png" width="30" height="30" alt="Jony bristow">
+                      </figure>
+
+                      <div>
+                        <a href="#" class="author-name">Jony bristow</a>
+
+                        <p class="author-title">Admin</p>
+                      </div>
+                    </div>
+
+                    <time class="publish-time" datetime="10:30">10:30 AM</time>
+
+                  </div>
+
+                  <h3 class="card-title">
+                    <a href="#">
+                      A good traveler has no fixed plans and is not intent on arriving.
+                    </a>
+                  </h3>
+
+                  <a href="#" class="btn-link">
+                    <span>Read More</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> -->
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Top địa điểm</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ba Đình</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Đống Đa</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Hai Bà Trưng</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Hoàn Kiếm</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tây Hồ</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Loại hình hot</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Du lịch</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Danh lam</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ẩm thực</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Văn hóa</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Kiến trúc</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Link nhanh</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Về chúng tôi</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Liên hệ</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Vé đặt chỗ</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Dịch vụ</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Quy định</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Nhận thông tin mới</p>
+
+          <p class="newsletter-text">
+            Chúng tôi sẽ gửi những thông tin ưu đãi và tin tức mới nhất tới hộp thư của bạn.
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
+
+            <button type="submit" class="btn btn-primary">Đăng ký nhận thông tin</button>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <a href="#" class="logo">Tourest</a>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top aria-label="Go To Top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="Admin/dist/js/jquery-3.6.4.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        margin: 30,
+        nav: true,
+        navText: ['<button>Previous</button>', '<button>Next</button>'],
+        autoplay: true,
+        loop: true,
+        dots: true,
+        responsive: {
+          // breakpoint from 480 up
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          // breakpoint from 768 up
+          992: {
+            items: 3
+          }
+        }
+      });
+
+      //   $('.owl-carousel').owlCarousel({
+      // loop:true,
+      // margin:10,
+      // nav:true,
+      // responsive:{
+      //     0:{
+      //         items:1
+      //     },
+      //     768:{
+      //         items:2
+      //     },
+      //     1000:{
+      //         items:3
+      //     }
+      // }
+      // })
+    });
+  </script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
